@@ -20,6 +20,9 @@ navTemplate.innerHTML = `
         color: #000;
         opacity: 0.85;
         z-index: 100;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     
     .navbar-container{
@@ -141,9 +144,9 @@ navTemplate.innerHTML = `
     
         .logo{
             position: absolute;
-            top: 10px;
+            top: -10px;
             right: 15px;
-            font-size: 2.5rem;
+            font-size: 1.5rem;
         }
     
         .navbar-container input[type="checkbox"]:checked ~ .menu-items{
