@@ -2,8 +2,8 @@ main{
     max-width: 80%;
     background-color: #d2d2d2;
     background-image: url('./imgs/carta.jpg');
+    background-size: cover;
     border-radius: 0 600px 0 0;
-    border: none;
     box-shadow: -11px 12px 11.9px 0px rgba(0, 0, 0, 0.38) inset;
 }
 
@@ -12,19 +12,119 @@ main{
     height: 100vh;
     background: transparent;
 }
+/*HEADER*/
 
 header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-content: center;
 }
 
 #lucchesi{
-    max-width: 70%;
+    width: 40vw;
+    z-index: 10;
 }
 
 header h2{
     font-family: 'Autography';
     color: #1C6633;
+    font-size: 40px;
+}
+
+.limone{
+    position: absolute;
+    width: 12%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.marchio{
+    position: absolute;
+    width: 120px;
+    top: 20vh;
+    left: 80vw;
+}
+
+/*STORIA*/
+
+.storia{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+    font-family: 'Cocogoose Light';
+    color: #1C6633;
+}
+
+.storia h2{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.storia p{
+    font-size: 12px;
+    max-width: 80%;
+}
+
+.storia-text{
+    transform: translateY(-50px);
+}
+
+.storia img{
+    max-width: 100%;
+    transform: translateX(-10%);
+}
+
+/*FOOTER*/
+
+.footer{
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(180deg, #268A42 36.91%, #1D6533 100%);
+    box-shadow: 0px -6px 15px 2px rgba(0, 0, 0, 0.46);
+}
+
+.footer p{
+    font-family: 'Cocogoose Light';
+    text-align: center;
+}
+
+#lucchesi-footer{
+    font-family: 'Caveat';
+}
+
+.socials img{
+    width: 40px;
+    margin: 0 10px;
+}
+
+#template-phone{
+    position: relative;
+    width: 100%;
+    transform: translateY(10px);
+}
+
+@media(max-width: 850px){
+    .marchio{
+        width: 50px;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        border-radius: 0 1000px 0 0;
+    }
+    header{
+        height: 100vh;
+    }
+    .storia{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .storia-text{
+        transform: translate(0px);
+    }
 }
