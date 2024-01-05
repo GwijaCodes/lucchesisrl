@@ -88,7 +88,7 @@ navTemplate.innerHTML = `
         .navbar-container{
             display: block;
             position: relative;
-            height: 64px;
+            height: px;
         }
     
         .navbar-container input[type="checkbox"]{
@@ -160,11 +160,11 @@ navTemplate.innerHTML = `
         }
     
         .logo{
-            font-size: 10px;
+            font-size: 14px;
             width: max-content;
             position: absolute;
             top: 40%;
-            left: 75%;
+            left: 70%;
             margin: auto 0;
 
         }
