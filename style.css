@@ -1,7 +1,7 @@
 main{
     max-width: 80%;
     background-color: #d2d2d2;
-    background-image: url('./imgs/carta.jpg');
+    background-image: url('./imgs/carta.webp');
     background-size: cover;
     border-radius: 0 600px 0 0;
     box-shadow: -11px 12px 11.9px 0px rgba(0, 0, 0, 0.38) inset;
