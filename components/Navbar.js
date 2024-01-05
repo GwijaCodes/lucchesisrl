@@ -164,7 +164,9 @@ navTemplate.innerHTML = `
             width: max-content;
             position: absolute;
             top: 40%;
-            left: 70%;
+            left: 75%;
+            margin: auto 0;
+
         }
     
         .navbar-container input[type="checkbox"]:checked ~ .menu-items{
@@ -200,7 +202,7 @@ navTemplate.innerHTML = `
                 <span class="line line3"></span>
             </div>
             <ul class="menu-items">
-                <li><a href="#">STORIA</a></li>
+                <li><a href="#"><slot id="storiaBtn" name="storiaBtn">STORIA</slot></a></li>
                 <li><a href="#">PRODOTTI</a></li>
                 <li><a href="#">CHI SIAMO</a></li>
                 <li><a href="#">CONTATTI</a></li>
@@ -210,12 +212,19 @@ navTemplate.innerHTML = `
     </nav>
 `
 
+
+
 class Navbar extends HTMLElement {
     constructor() {
         super()
         const shadow = this.attachShadow({ mode: "open" })
         shadow.append(navTemplate.content.cloneNode(true))
         this.checkbox = shadow.querySelector('input')
+
+    }
+    connectedCallback(){
+        
+
     }
 }
 

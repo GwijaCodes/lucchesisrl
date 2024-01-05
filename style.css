@@ -20,7 +20,7 @@ header{
 }
 
 #lucchesi{
-    width: 40vw;
+    max-width: 40vw;
     z-index: 10;
 }
 
@@ -37,6 +37,13 @@ header h2{
     transform: translateY(-50%);
 }
 
+.limone-sm{
+    position: absolute;
+    top: 100vh;
+    left: 100%;
+    transform: translate(-100%, -50%);
+}
+
 .marchio{
     position: absolute;
     width: 120px;
@@ -47,6 +54,8 @@ header h2{
 /*STORIA*/
 
 .storia{
+    max-width: 80%;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-content: center;
@@ -61,7 +70,6 @@ header h2{
 
 .storia p{
     font-size: 12px;
-    max-width: 80%;
 }
 
 .storia-text{
@@ -107,10 +115,25 @@ header h2{
     transform: translateY(10px);
 }
 
-@media(max-width: 850px){
+@media(max-width: 768px){
     .marchio{
         width: 50px;
     }
+
+    .limone{
+        top: 10%;
+        width: 30%;
+    }
+
+    .limone-sm{
+        width: 30%;
+    }
+
+    #lucchesi{
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
     main{
         display: flex;
         flex-direction: column;
@@ -118,6 +141,7 @@ header h2{
     }
     header{
         height: 100vh;
+        place-content: center;
     }
     .storia{
         display: flex;
@@ -126,5 +150,14 @@ header h2{
 
     .storia-text{
         transform: translate(0px);
+        margin-top: 10%;
+    }
+
+    .footer{
+        font-size: 10px;
+        flex-direction: column;
+        height: 25vh;
+        justify-content: space-around;
+        padding: 10% 0;
     }
 }
