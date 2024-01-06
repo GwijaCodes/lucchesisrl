@@ -1,5 +1,5 @@
 main{
-    max-width: 80%;
+    max-width: 90%;
     background-color: #d2d2d2;
     background-image: url('./imgs/carta.webp');
     background-size: cover;
@@ -9,7 +9,7 @@ main{
 
 .prodotti, .storia, header{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background: transparent;
 }
 /*HEADER*/
@@ -32,23 +32,35 @@ header h2{
 
 .limone{
     position: absolute;
-    width: 12%;
+    width: 40%;
     top: 50%;
-    transform: translateY(-50%);
+    left: 0;
+    transition: top .5s ease;
+    transform: translate(-50%, -50%);
 }
 
 .limone-sm{
     position: absolute;
-    top: 100vh;
+    top: 110vh;
     left: 100%;
+    width: 14%;
     transform: translate(-100%, -50%);
+}
+
+.limone-pr{
+    position: absolute;
+    top: 200vh;
+    left: 0;
+    width: 10%;
+    z-index: 1;
+    transform: rotate(180deg) translateY(60%);
 }
 
 .marchio{
     position: absolute;
     width: 120px;
     top: 20vh;
-    left: 80vw;
+    left: 85vw;
 }
 
 /*STORIA*/
@@ -57,7 +69,7 @@ header h2{
     max-width: 80%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, 50%);
     place-content: center;
     font-family: 'Cocogoose Light';
     color: #1C6633;
@@ -76,9 +88,118 @@ header h2{
     transform: translateY(-50px);
 }
 
-.storia img{
+#foto-storia{
     max-width: 100%;
     transform: translateX(-10%);
+}
+
+/*PRODOTTI*/
+
+.prodotti-text{
+    color: #1C6633;
+    max-width: 70%;
+    margin: auto;
+}
+
+.prodotti h2 span{
+    font-size: 15px;
+}
+
+.prodotti h2{
+    font-family: 'Cocogoose Light';
+    width: 100%;
+    margin-bottom: 5%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.prodotti h3{
+    font-family: 'Caveat';
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.prodotti p{
+    font-family: 'Cocogoose Light';
+    font-size: 14px;
+    width: 100%;
+}
+
+.products-section{
+    width: 80%;
+    margin: 4% auto;
+    margin-bottom: 10%;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(auto-fill, 45%);
+    row-gap: 15vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    width: 80%;
+    height: fit-content;
+    border-radius: 20px;
+    background: transparent;
+    backdrop-filter: blur(2px);
+    box-shadow: 0px 9px 9.3px 7px rgba(0, 0, 0, 0.25);
+    transition: box-shadow .2s;
+    cursor: pointer;
+}
+
+.card .info{
+    width: 100%;
+    padding: 1.5em;
+    padding-bottom: 2.2em;
+    border-radius: 20px;
+    background-color: #1C6633;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.card h4{
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'caveat';
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+.card p{
+    font-size: 12px;
+    font-family: 'Arial';
+    line-height: 1.5em;
+}
+
+.product-pic{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.product-pic img{
+    max-width: 80%;
+    margin: auto;
+    transform: translateY(20px);
+    transition: transform .2s;
+}
+
+.card:hover{
+    box-shadow: 0px 5px 9.3px 7px rgba(0, 0, 0, 0.41);
+}
+
+.card:hover img{
+    transform: translateY(0px);
+}
+
+.card:checked{
+    background-color: red;
 }
 
 /*FOOTER*/
@@ -132,11 +253,12 @@ header h2{
 
     .limone{
         top: 10%;
-        width: 30%;
+        width: 70%;
     }
 
     .limone-sm{
         width: 30%;
+        top: 100vh;
     }
 
     #lucchesi{
@@ -156,6 +278,7 @@ header h2{
     .storia{
         display: flex;
         flex-direction: column;
+        margin-bottom: 10vh;
     }
 
     .storia-text{
@@ -173,5 +296,17 @@ header h2{
 
     .socials{
         height: 30px;
+    }
+
+    .card{
+        height: fit-content;
+    }
+
+    .products-section{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 6vh;
     }
 }
