@@ -247,9 +247,8 @@ header{
         width: 70%;
     }
 
-    .limone-sm{
-        width: 30%;
-        top: 100vh;
+    .limone-sm, .limone-pr{
+        display: none;
     }
 
     #lucchesi{
