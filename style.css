@@ -302,6 +302,22 @@ header h2{
         height: fit-content;
     }
 
+    .prodotti h2{
+        margin-bottom: 4vh;
+    }
+
+    .card h4{
+        font-size: 12px;
+    }
+
+    .card p{
+        font-size: 10px;
+    }
+
+    .prodotti-text{
+        margin-bottom: 4vh;
+    }
+
     .products-section{
         max-width: 100%;
         display: flex;
