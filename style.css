@@ -110,7 +110,6 @@ header{
 .prodotti h3{
     font-family: 'Caveat';
     font-size: 35px;
-    line-height: 60px;
 }
 
 .prodotti p{
@@ -122,7 +121,7 @@ header{
 .products-section{
     width: 80%;
     margin: 4% auto;
-    margin-bottom: 10%;
+    margin-bottom: 16vh;
     display: grid;
     place-content: center;
     grid-template-columns: repeat(auto-fill, 45%);
@@ -267,13 +266,13 @@ header{
     }
     .storia{
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         margin-bottom: 10vh;
     }
 
     .storia-text{
         transform: translate(0px);
-        margin-top: 10%;
+        margin-bottom: 20%;
     }
 
     .footer{

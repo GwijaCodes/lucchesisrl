@@ -126,7 +126,7 @@ class Navbar extends HTMLElement {
                 height: 4px;
                 width: 100%;
                 border-radius: 10px;
-                background: #64B245;
+                background: #fff;
             }
             
             .navbar-container .hamburger-lines .line1{
