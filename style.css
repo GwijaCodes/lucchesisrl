@@ -7,6 +7,12 @@ main{
     box-shadow: -11px 12px 11.9px 0px rgba(0, 0, 0, 0.38) inset;
 }
 
+h2{
+    font-family: 'Caveat';
+    font-weight: 700;
+    font-size: 50px;
+}
+
 .prodotti, .storia, header{
     width: 100%;
     min-height: 100vh;
@@ -22,12 +28,6 @@ header{
 #lucchesi{
     max-width: 40vw;
     z-index: 10;
-}
-
-header h2{
-    font-family: 'Autography';
-    color: #1C6633;
-    font-size: 40px;
 }
 
 .limone{
@@ -71,17 +71,17 @@ header h2{
     display: grid;
     grid-template-columns: repeat(auto-fill, 50%);
     place-content: center;
-    font-family: 'Cocogoose Light';
+    font-family: 'Poppins';
     color: #1C6633;
 }
 
 .storia h2{
-    font-size: 30px;
     margin-bottom: 30px;
 }
 
 .storia p{
     font-size: 12px;
+    font-family: 'Poppins';
 }
 
 .storia-text{
@@ -101,26 +101,20 @@ header h2{
     margin: auto;
 }
 
-.prodotti h2 span{
-    font-size: 15px;
-}
-
 .prodotti h2{
-    font-family: 'Cocogoose Light';
     width: 100%;
     margin-bottom: 5%;
-    font-size: 30px;
     text-align: center;
 }
 
 .prodotti h3{
     font-family: 'Caveat';
-    font-size: 30px;
+    font-size: 35px;
     line-height: 60px;
 }
 
 .prodotti p{
-    font-family: 'Cocogoose Light';
+    font-family: 'Poppins';
     font-size: 14px;
     width: 100%;
 }
@@ -144,8 +138,7 @@ header h2{
     width: 80%;
     height: fit-content;
     border-radius: 20px;
-    background: transparent;
-    backdrop-filter: blur(2px);
+    background: linear-gradient(#FFF 0.31%, rgba(217, 217, 217, 0.00) 17.7%);
     box-shadow: 0px 9px 9.3px 7px rgba(0, 0, 0, 0.25);
     transition: box-shadow .2s;
     cursor: pointer;
@@ -156,23 +149,21 @@ header h2{
     padding: 1.5em;
     padding-bottom: 2.2em;
     border-radius: 20px;
-    background-color: #1C6633;
-    color: #fff;
+    color: #1C6633;
     display: flex;
     flex-direction: column;
 }
 
 .card h4{
-    font-size: 1.2em;
+    font-size: 1.8em;
+    line-height: 31px;
     font-weight: bold;
     font-family: 'caveat';
-    text-align: center;
     margin-bottom: 4%;
 }
 
 .card p{
     font-size: 12px;
-    font-family: 'Arial';
     line-height: 1.5em;
 }
 
@@ -195,7 +186,7 @@ header h2{
 }
 
 .card:hover img{
-    transform: translateY(0px);
+    transform: translateY(10px);
 }
 
 .card:checked{
@@ -217,7 +208,7 @@ header h2{
 }
 
 .footer p{
-    font-family: 'Cocogoose Light';
+    font-family: 'Poppins';
     text-align: center;
 }
 
@@ -307,7 +298,8 @@ header h2{
     }
 
     .card h4{
-        font-size: 12px;
+        font-size: 25px;
+        line-height: 26px;
     }
 
     .card p{
