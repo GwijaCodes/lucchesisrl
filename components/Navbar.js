@@ -1,6 +1,10 @@
 const navbarTemplate = document.createElement('template')
 navbarTemplate.innerHTML = `
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
         .navbar input[type="checkbox"],
         .navbar .hamburger-lines{
             display: none;
@@ -15,6 +19,7 @@ navbarTemplate.innerHTML = `
         .navbar{
             position: fixed;
             width: 100%;
+            height: 60px;
             background: linear-gradient(180deg, #268A42 36.91%, #1D6533 100%);
             color: #fff;
             z-index: 100;
@@ -33,7 +38,6 @@ navbarTemplate.innerHTML = `
         }
         
         .menu-items{
-            order: 2;
             display: flex;
         }
         
@@ -79,7 +83,6 @@ navbarTemplate.innerHTML = `
         }
         
         @media (max-width: 768px){
-        
             .navbar-container input[type="checkbox"],
             .navbar-container .hamburger-lines{
                 display: block;
@@ -88,7 +91,6 @@ navbarTemplate.innerHTML = `
             .navbar-container{
                 display: block;
                 position: relative;
-                height: px;
             }
         
             .navbar-container input[type="checkbox"]{
@@ -139,28 +141,22 @@ navbarTemplate.innerHTML = `
             }
         
             .navbar .menu-items{
-                padding-top: 100px;
-                background: #ffffff76;
-                height: 100vh;
-                max-width: 300px;
-                transform: translate(-150%);
+                background: transparent;
+                backdrop-filter: blur(1px);
+                box-shadow: 0px 4px 9.3px 2px rgba(0, 0, 0, 0.25);
+                border-radius: 4px;
+                padding: 4px;
                 display: flex;
-                flex-direction: column;
-                margin-left: -40px;
-                padding-left: 40px;
+                max-width: 95vw;
+                margin: 0 auto;
                 transition: transform 0.5s ease-in-out;
-                box-shadow:  5px 0px 10px 0px #aaa;
-                overflow: scroll;
-            }
-
-            .menu-items:active{
-                transform: translateX(-150);
+                transform: translateY(-300px);
             }
         
             .navbar .menu-items li{
-                margin-bottom: 1.8rem;
-                font-size: 1.1rem;
-                font-weight: 500;
+                font-size: .6rem;
+                max-width: 25vw;
+                height: 16px;
             }
         
             .logo{
@@ -170,11 +166,10 @@ navbarTemplate.innerHTML = `
                 top: 40%;
                 left: 70%;
                 margin: auto 0;
-    
             }
         
             .navbar-container input[type="checkbox"]:checked ~ .menu-items{
-                transform: translateX(0);
+                transform: translateY(150%);
             }
         
             .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1{
@@ -189,12 +184,6 @@ navbarTemplate.innerHTML = `
                 transform: rotate(-45deg);
             }
         
-        }
-        
-        @media (max-width: 500px){
-            .navbar-container input[type="checkbox"]:checked ~ .logo{
-                display: none;
-            }
         }
     </style>
     <nav class="navbar">

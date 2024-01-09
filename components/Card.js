@@ -38,7 +38,7 @@ cardTemplate.innerHTML = `
         border-radius: 20px;
         background: linear-gradient(#FFF 0.31%, rgba(217, 217, 217, 0.00) 17.7%);
         box-shadow: 0px 9px 9.3px 7px rgba(0, 0, 0, 0.25);
-        transition: all .2s;     
+        transition: all .2s;    
         transform: rotateX(0deg); 
     }
     
