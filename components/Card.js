@@ -72,12 +72,10 @@ cardTemplate.innerHTML = `
         max-width: 100%;
         max-height: 100%;
         padding: 1em;
-        display: grid;
-        place-content: center;
     }
     
     .product-pic img{
-        max-width: 80%;
+        max-width: 100%;
         margin: auto;
     }
     
