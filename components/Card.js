@@ -143,7 +143,7 @@ cardTemplate.innerHTML = `
                 </div>
                 <div class="card-front-inner">
                     <section class="product-pic">
-                         <img src="../imgs/prodotto.webp" alt="">
+                         <img src="../imgs/cassa.webp" alt="">
                     </section>
                     <section class="info">
                         <h4><slot name='product-name'>Nome prodotto</slot></h4>

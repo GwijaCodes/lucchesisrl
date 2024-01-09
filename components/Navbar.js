@@ -152,6 +152,10 @@ navbarTemplate.innerHTML = `
                 box-shadow:  5px 0px 10px 0px #aaa;
                 overflow: scroll;
             }
+
+            .menu-items:active{
+                transform: translateX(-150);
+            }
         
             .navbar .menu-items li{
                 margin-bottom: 1.8rem;
