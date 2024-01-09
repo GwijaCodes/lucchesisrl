@@ -2,12 +2,13 @@ const cardTemplate = document.createElement('template')
 cardTemplate.innerHTML = `
     <style>
     *{
-         box-sizing: border-box;
+        box-sizing: border-box;
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
         padding: 0;
         margin: 0;
         }
+
     .flip-card{
         width: 80%;
         height: fit-content;
@@ -28,7 +29,7 @@ cardTemplate.innerHTML = `
     .card-front-inner, .card-back{
         width: 100%;
         height: 100%;
-        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
         border-radius: 20px;
     }
     
@@ -68,9 +69,9 @@ cardTemplate.innerHTML = `
     }
     
     .product-pic{
-        width: 100%;
-        height: 100%;
-        padding-top: 16px;
+        max-width: 100%;
+        max-height: 100%;
+        padding: 1em;
         display: grid;
         place-content: center;
     }
@@ -78,7 +79,6 @@ cardTemplate.innerHTML = `
     .product-pic img{
         max-width: 80%;
         margin: auto;
-        transition: transform .2s;
     }
     
     .flip-card:hover .card-front-inner{
