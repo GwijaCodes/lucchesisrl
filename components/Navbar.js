@@ -172,6 +172,8 @@ navbarTemplate.innerHTML = `
         
             .navbar-container input[type="checkbox"]:checked ~ .menu-items{
                 transform: translateY(150%);
+                justify-content: space-around;
+
             }
         
             .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1{
