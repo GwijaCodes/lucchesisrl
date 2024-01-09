@@ -39,6 +39,7 @@ navbarTemplate.innerHTML = `
         
         .menu-items{
             display: flex;
+            order: 2;
         }
         
         .logo{
