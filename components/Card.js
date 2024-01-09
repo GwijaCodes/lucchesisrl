@@ -68,6 +68,7 @@ cardTemplate.innerHTML = `
     .product-pic{
         width: 100%;
         height: 100%;
+        padding-top: 16px;
         display: grid;
         place-content: center;
     }
@@ -75,7 +76,6 @@ cardTemplate.innerHTML = `
     .product-pic img{
         max-width: 80%;
         margin: auto;
-        transform: translateY(10%);
         transition: transform .2s;
     }
     
@@ -85,10 +85,6 @@ cardTemplate.innerHTML = `
 
     .card-back{
         box-shadow: 0px 5px 9.3px 7px rgba(0, 0, 0, 0.41);
-    }
-    
-    .flip-card:hover .card-front-inner img{
-        transform: translateY(2%);
     }
     
     .card-back{
