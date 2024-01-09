@@ -136,14 +136,14 @@ cardTemplate.innerHTML = `
                 <div class="card-back">
                     <div class="card-back-inner">
                         <a href="../imgs/succo-arance.pdf" download="">
-                            <img src="../imgs/download.png" alt="">
+                            <img />
                         </a>
                         <h3>Scheda Tecnica</h3>
                     </div>
                 </div>
                 <div class="card-front-inner">
                     <section class="product-pic">
-                         <img src="../imgs/cassa.webp" alt="">
+                          <img />
                     </section>
                     <section class="info">
                         <h4><slot name='product-name'>Nome prodotto</slot></h4>
@@ -159,6 +159,14 @@ class Card extends HTMLElement {
         super()
         const shadow = this.attachShadow({ mode: "open" });
         shadow.append(cardTemplate.content.cloneNode(true));
+    }
+
+    static get observedAttributes(){
+        return['prodotto'];
+    }
+
+    attributeChangedCallback(name, oldValue, newValue) {
+        this.shadowRoot.querySelector('.product-pic img').src = this.getAttribute('prodotto');
     }
 
     flipMe = () => {
