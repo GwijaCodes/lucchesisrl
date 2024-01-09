@@ -1,0 +1,176 @@
+const cardTemplate = document.createElement('template')
+cardTemplate.innerHTML = `
+    <style>
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        }
+    .flip-card{
+        width: 80%;
+        height: fit-content;
+        margin: auto;
+        perspective: 3000px;
+        cursor: pointer;
+        color: #1C6633;
+    }
+    
+    .card-inner{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform .8s;
+        transform-style: preserve-3d;
+    }
+
+    .card-front-inner, .card-back{
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 20px;
+    }
+    
+    .card-front-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 20px;
+        background: linear-gradient(#FFF 0.31%, rgba(217, 217, 217, 0.00) 17.7%);
+        box-shadow: 0px 9px 9.3px 7px rgba(0, 0, 0, 0.25);
+        transition: all .2s;     
+    }
+    
+    .card-front-inner .info{
+        position: relative;
+        width: 100%;
+        padding: 1.5em;
+        padding-bottom: 2.2em;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .card-front-inner h4{
+        font-size: 1.8em;
+        line-height: 31px;
+        font-weight: bold;
+        font-family: 'caveat';
+        margin-bottom: 4%;
+    }
+    
+    .card-front-inner p{
+        font-size: 12px;
+        line-height: 1.5em;
+    }
+    
+    .product-pic{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-content: center;
+    }
+    
+    .product-pic img{
+        max-width: 80%;
+        margin: auto;
+        transform: translateY(10%);
+        transition: transform .2s;
+    }
+    
+    .flip-card:hover .card-front-inner{
+        box-shadow: 0px 5px 9.3px 7px rgba(0, 0, 0, 0.41);
+    }
+
+    .card-back{
+        box-shadow: 0px 5px 9.3px 7px rgba(0, 0, 0, 0.41);
+    }
+    
+    .flip-card:hover .card-front-inner img{
+        transform: translateY(2%);
+    }
+    
+    .card-back{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;    
+        background-color: transparent;
+        transform: rotateY(180deg);
+    }
+
+    .card-back-inner{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+        padding: 10% 0;
+    }
+
+    .card-back-inner a{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+    }
+    
+    .card-back-inner img{
+        max-width: 30%;
+    }
+
+    @media(max-width: 768px){
+        .info h4{
+            font-size: 18px;
+        }
+
+        .flip-card p{
+            font-size: 12px;
+        }
+    }
+    </style>
+
+    <div class="flip-card">
+        <div class="card-inner">
+            <div class="card-inner">
+                <div class="card-back">
+                    <div class="card-back-inner">
+                        <a href="../imgs/succo-arance.pdf" download="">
+                            <img src="../imgs/download.png" alt="">
+                        </a>
+                        <h3>Scheda Tecnica</h3>
+                    </div>
+                </div>
+                <div class="card-front-inner">
+                    <section class="product-pic">
+                         <img src="../imgs/prodotto.webp" alt="">
+                    </section>
+                    <section class="info">
+                        <h4><slot name='product-name'>Nome prodotto</slot></h4>
+                        <p><slot name='product-description'></slot></p>
+                    </section>
+                </div>
+            </div>
+    </div>
+`
+
+class Card extends HTMLElement {
+    constructor() {
+        super()
+        const shadow = this.attachShadow({ mode: "open" });
+        shadow.append(cardTemplate.content.cloneNode(true));
+    }
+
+    flipMe = () => {
+        this.shadowRoot.querySelector('.card-inner').style.transform = 'rotateY(180deg)';
+        this.addEventListener('mouseleave', () => {
+            this.shadowRoot.querySelector('.card-inner').style.transform = 'rotateY(360deg)';
+        })
+    }
+
+    connectedCallback(){
+        this.shadowRoot.querySelector('.flip-card').addEventListener('click', this.flipMe)
+    }
+}
+
+customElements.define("my-card", Card)

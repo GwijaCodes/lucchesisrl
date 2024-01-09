@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./components/Navbar.js"></script>
+    <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="style.css">
+    <script src="./components/Navbar.js"></script>
+    <script src="./components/Footer.js"></script>
+    <script src="./components/Card.js"></script>
     <link rel="shortcut icon" href="./imgs/marchio-carta.webp" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +32,7 @@
 <body>
     <nav-bar></nav-bar>
     <img src="./imgs/lumia-grande.webp" alt="fetta di limone" class="limone">
-    <img src="./imgs/limonis.png" alt="fetta di limone" class="limone-sm">
+    <img src="./imgs/limonis.webp" alt="fetta di limone" class="limone-sm">
     <img src="./imgs/marchio-carta.webp" alt="marchio lucchesi limone" class="marchio">
    <main>
         <header>
@@ -40,13 +43,13 @@
             <img id="foto-storia" src="./imgs/foto-storia.webp" alt="lucchesi anni 50">
             <div class="storia-text">
                 <h2><span style="font-size: 30px;">La</span> Storia</h2>
-                <p>Una storia da ben quattro generazioni, strettamente legata al territorio siciliano dove nasce l’azienda “Lucchesi.” <br> <br>
-                    Il nostro capostipite Salvatore Lucchesi fonda l'azienda negli anni <span style="font-family: Arial; font-weight: bold;">'50</span>, quando gli agrumi spopolano nell'economia siciliana e il settore dei succhi e delle essenze sono un principale indotto. <br> <br>
+                    <p>Una storia da ben quattro generazioni, strettamente legata al territorio siciliano dove nasce l’azienda “Lucchesi.” <br> <br>
+                    Il nostro capostipite <b>Salvatore Lucchesi</b> fonda l'azienda negli anni '50, quando gli agrumi spopolano nell'economia siciliana e il settore dei succhi e delle essenze sono un principale indotto. <br> <br>
                     La Sicilia, in particolare l'area dell'Etna, è fortemente predisposta all'agrumicoltura e soprattutto alla limonicoltura. <br> <br>
-                    Con lo stesso entusiasmo del nonno e del padre, oggi noi fratelli Lucchesi produciamo succhi ed essenze di agrumi di altissima qualità, raggiungendo tutto il territorio internazionale, rendendo un sogno realtà! <br> <br>
-                    Grazie ad una alta qualità dovuta all'esperienza, acquisita di padre in figli, alla profonda conoscenza della frutta e, non ultima, alla contiguità tra gli agrumeti e lo stabilimento, vi garantiamo freschezza e fragranza del prodotto, tutto made in Sicily.</p>
+                    Con lo stesso entusiasmo del nonno e del padre, oggi noi fratelli Lucchesi produciamo succhi ed essenze di agrumi di altissima <b>qualità</b>, raggiungendo tutto il territorio internazionale, rendendo un sogno realtà! <br> <br>
+                    Grazie ad una alta qualità dovuta all'esperienza, acquisita di padre in figli, alla profonda conoscenza della frutta e, non ultima, alla contiguità tra gli agrumeti e lo stabilimento, vi garantiamo freschezza e fragranza del prodotto, tutto made in <b>Sicily</b>.</p>
             </div>
-    <img src="./imgs/limonis.png" alt="fetta di limone" class="limone-pr">
+    <img src="./imgs/limonis.webp" alt="fetta di limone" class="limone-pr">
         </div>
         <div class="prodotti">
             <div class="prodotti-text"> 
@@ -54,103 +57,71 @@
                  <h3>Succhi</h3>
                 <p>Pronti surgelati, sono ideali per la preparazione di: gelati, dolci, bibite, cocktails.</p>
             </div>
-           
             <section class="products-section">
-                <div class="card">
-                    <section class="product-pic">
-                        <img src="./imgs/prodotto.webp" alt="">
-                    </section>
-                    <section class="info">
-                        <h4>Succo di Limone Surgelato</h4>
-                        <p>SCATOLA - Kg. 12 <br>
-                            CODICE 123 per buste da kg.1 <br>CODICE 138 per buste da kg. 0,5</p>
-                    </section>
-                </div>
-                <div class="card">
-                    <section class="product-pic">
-                        <img src="./imgs/prodotto.webp" alt="">
-                    </section>
-                    <section class="info">
-                        <h4>Succo d'Arancia Surgelato</h4>
-                        <p>SCATOLA - Kg. 12 <br>
-                            CODICE 122 per buste da kg. 1 <br>
-                            CODICE 139 per buste da kg. 0,5</p>
-                    </section>
-                </div>
-                <div class="card">
-                    <section class="product-pic">
-                        <img src="./imgs/prodotto.webp" alt="">
-                    </section>
-                    <section class="info">
-                        <h4>Succo di Mandarino Surgelato</h4>
-                        <p>SCATOLA - Kg. 12 <br>
-                            CODICE 124 per buste da kg. 1 <br>
-                            CODICE 140 per buste da kg. 0,5</p>
-                    </section>
-                </div>
-            </section>
-            <div class="prodotti-text"> 
-                 <h3>Preparati per Sorbetto</h3>
-                <p></p>
-            </div>
-            <section class="products-section">
-                <div class="card">
-                    <section class="product-pic">
-                        <img src="./imgs/secchiello.png" alt="">
-                    </section>
-                    <section class="info">
-                        <h4>Preparato per Sorbetto e Granita Limone</h4>
-                        <p>SCATOLA - Kg. 10 <br>
-                            CODICE 150 per secchielli da kg.2,5</p>
-                    </section>
-                </div>
-            </section>
-            <div class="prodotti-text"> 
-                <h3>Olii essenziali</h3>
-               <p></p>
-           </div>
-           <section class="products-section">
-            <div class="card">
-                <section class="product-pic">
-                    <img src="./imgs/prodotto.webp" alt="">
+                    <my-card>
+                        <h4 slot="product-name">Succo Di Limone Surgelato</h4>
+                        <p slot="product-description">
+                            Scatola KG 12 <br>
+                            CODICE 123 per buste da KG 1 <br>
+                            CODICE 138 per buste da KG 0,5</p>
+                    </my-card>
+                    <my-card>
+                        <h4 slot="product-name">Succo d'Arancia Surgelato</h4>
+                        <p slot="product-description">
+                            Scatola KG 12 <br>
+                            CODICE 122 per buste da KG 1 <br>
+                            CODICE 139 per buste da KG 0,5</p>
+                    </my-card>
+                    <my-card>
+                        <h4 slot="product-name">Succo di Mandarino Surgelato</h4>
+                        <p slot="product-description">
+                            Scatola KG 12 <br>
+                            CODICE 124 per buste da KG 1 <br>
+                            CODICE 140 per buste da KG 0,5</p>
+                    </my-card>
                 </section>
-                <section class="info">
-                    <h4>Olio essenziale Limone</h4>
-                    <p>CODICE 02</p>
+                <div class="prodotti-text"> 
+                    <h3>Preparati per Sorbetto</h3>
+                    <p></p>
+                </div>
+                <section class="products-section">
+                    <my-card></my-card>
                 </section>
             </div>
-            <div class="card">
-                <section class="product-pic">
-                    <img src="./imgs/prodotto.webp" alt="">
-                </section>
-                <section class="info">
-                    <h4>Olio essenziale Mandarino</h4>
-                    <p>CODICE 25</p>
-                </section>
-            </div>
-            <div class="card">
-                <section class="product-pic">
-                    <img src="./imgs/prodotto.webp" alt="">
-                </section>
-                <section class="info">
-                    <h4>Olio essenziale Arancia</h4>
-                    <p>CODICE 05</p>
-                </section>
-            </div>
-        </section>
         </div>
+        <div class="chisiamo"></div>
         <img id="template-phone" src="./imgs/template-phone.webp" alt="social">
    </main>
-   <footer>
-    <div class="footer">
-        <div class="socials">
-            <a href=""><img src="./imgs/instagram.png" alt="instagram"></a>
-            <a href=""><img src="./imgs/facebook.png" alt="facebook"></a>
-        </div>
-            <p>Copyright  Lucchesi Srl ©<span style="font-family: Arial; font-weight: bold;">2024</span> - Via G.Marconi <span style="font-family: Arial; font-weight: bold;">58/60</span> Acicatena (CT) <br>
-            lucchesisrl<span style="font-family: Arial; font-weight: bold;">@</span>virgilio.it - <span style="font-family: Arial; font-weight: bold;">Tel. +39 095 801611  PI 03590470872</span></p>
-            <span id="lucchesi-footer">LUCCHESI S.R.L.</span>
-    </div>
-   </footer>
+   <my-footer></my-footer>
+   <script>
+    //navbar scroll buttons
+    const storiaSection = document.querySelector('.storia');
+    const prodottiSection = document.querySelector('.prodotti');
+    const contattiSection = document.querySelector('my-footer');
+    function storiaScroller(){
+        storiaSection.scrollIntoView({ 
+            behavior: "smooth", 
+            block: 'start', 
+            inline: 'start',
+            scrollPaddingTop: "10vh"
+        });
+    }
+    function prodottiScroller(){
+        prodottiSection.scrollIntoView({ 
+            behavior: "smooth", 
+            block: 'start', 
+            inline: 'start',
+            scrollPaddingTop: "10vh"
+        });
+    }
+    function contattiScroller(){
+        contattiSection.scrollIntoView({ 
+            behavior: "smooth", 
+            block: 'start', 
+            scrollPaddingTop: "10vh"
+        });
+    }
+   </script>
 </body>
 </html>
+

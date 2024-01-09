@@ -1,11 +1,6 @@
-class Navbar extends HTMLElement {
-    constructor() {
-        super();
-
-        const shadowRoot = this.attachShadow({ mode: "open" })
-
-        shadowRoot.innerHTML = `
-        <style>    
+const navbarTemplate = document.createElement('template')
+navbarTemplate.innerHTML = `
+    <style>
         .navbar input[type="checkbox"],
         .navbar .hamburger-lines{
             display: none;
@@ -197,8 +192,8 @@ class Navbar extends HTMLElement {
                 display: none;
             }
         }
-        </style>
-        <nav class="navbar">
+    </style>
+    <nav class="navbar">
             <div class="navbar-container container">
                 <input type="checkbox" name="" id="">
                 <div class="hamburger-lines">
@@ -207,21 +202,24 @@ class Navbar extends HTMLElement {
                     <span class="line line3"></span>
                 </div>
                 <ul class="menu-items">
-                    <li><a href="#"><slot id="storiaBtn" name="storiaBtn">STORIA</slot></a></li>
-                    <li><a href="#">PRODOTTI</a></li>
+                    <li onclick = storiaScroller()>STORIA</li>
+                    <li onclick = prodottiScroller()>PRODOTTI</li>
                     <li><a href="#">CHI SIAMO</a></li>
-                    <li><a href="#">CONTATTI</a></li>
+                    <li onclick = contattiScroller()>CONTATTI</li>
                 </ul>
                 <h1 class="logo"><a href="">LUCCHESI S.R.L.</a></h1>
             </div>
         </nav>
-        `
+`
+
+
+//navbar
+class Navbar extends HTMLElement {
+    constructor() {
+        super()
+        const shadow = this.attachShadow({ mode: "open" });
+        shadow.append(navbarTemplate.content.cloneNode(true));
     }
 }
 
-window.customElements.define("nav-bar", Navbar)
-
-{
-    const btnEm = document.querySelector('nav-bar');
-    btnEm.shadowRoot.querySelector('li').style.background = '#900'
-}
+customElements.define("nav-bar", Navbar)

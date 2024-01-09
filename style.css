@@ -53,7 +53,7 @@ header{
     left: 0;
     width: 10%;
     z-index: 1;
-    transform: rotate(180deg) translateY(60%);
+    transform: scaleX(-1) translateY(-60%);
 }
 
 .marchio{
@@ -61,6 +61,10 @@ header{
     width: 120px;
     top: 20vh;
     left: 85vw;
+}
+
+.storia, .prodotti, .chisiamo{
+    scroll-margin: 8vh;
 }
 
 /*STORIA*/
@@ -77,6 +81,8 @@ header{
 
 .storia h2{
     margin-bottom: 30px;
+    font-family: 'Poppins';
+    font-weight: 400;
 }
 
 .storia p{
@@ -114,7 +120,6 @@ header{
 
 .prodotti p{
     font-family: 'Poppins';
-    font-size: 14px;
     width: 100%;
 }
 
@@ -128,113 +133,16 @@ header{
     row-gap: 15vh;
 }
 
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin: auto;
-    width: 80%;
-    height: fit-content;
-    border-radius: 20px;
-    background: linear-gradient(#FFF 0.31%, rgba(217, 217, 217, 0.00) 17.7%);
-    box-shadow: 0px 9px 9.3px 7px rgba(0, 0, 0, 0.25);
-    transition: box-shadow .2s;
-    cursor: pointer;
-}
+/*card*/
 
-.card .info{
-    width: 100%;
-    padding: 1.5em;
-    padding-bottom: 2.2em;
-    border-radius: 20px;
-    color: #1C6633;
-    display: flex;
-    flex-direction: column;
-}
 
-.card h4{
-    font-size: 1.8em;
-    line-height: 31px;
-    font-weight: bold;
-    font-family: 'caveat';
-    margin-bottom: 4%;
-}
-
-.card p{
-    font-size: 12px;
-    line-height: 1.5em;
-}
-
-.product-pic{
-    width: 100%;
-    height: 100%;
-    display: grid;
-    place-content: center;
-}
-
-.product-pic img{
-    max-width: 80%;
-    margin: auto;
-    transform: translateY(20px);
-    transition: transform .2s;
-}
-
-.card:hover{
-    box-shadow: 0px 5px 9.3px 7px rgba(0, 0, 0, 0.41);
-}
-
-.card:hover img{
-    transform: translateY(10px);
-}
-
-.card:checked{
-    background-color: red;
-}
 
 /*FOOTER*/
-
-.footer{
-    position: relative;
-    width: 100%;
-    height: 40vh;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background: linear-gradient(180deg, #268A42 36.91%, #1D6533 100%);
-    box-shadow: 0px -6px 15px 2px rgba(0, 0, 0, 0.46);
-}
-
-.footer p{
-    font-family: 'Poppins';
-    text-align: center;
-}
-
-#lucchesi-footer{
-    font-family: 'Caveat';
-}
-
-.socials{
-    height: 30px;
-}
-
-.socials img{
-    height: 100%;
-    margin: 0 10px;
-    cursor: pointer;
-    transition: transform .2s;
-}
-
-.socials img:hover{
-    transform: translateY(-3px) scale(110%);
-}
-
-#template-phone{
+#template-phone {
     position: relative;
     width: 100%;
     transform: translateY(10px);
-}
+  }
 
 @media(max-width: 768px){
     .marchio{
@@ -275,19 +183,7 @@ header{
         margin-bottom: 20%;
     }
 
-    .footer{
-        font-size: 10px;
-        flex-direction: column;
-        height: 25vh;
-        justify-content: space-around;
-        padding: 10% 0;
-    }
-
-    .socials{
-        height: 30px;
-    }
-
-    .card{
+    .card-front{
         height: fit-content;
     }
 
@@ -295,12 +191,12 @@ header{
         margin-bottom: 4vh;
     }
 
-    .card h4{
+    .card-front h4{
         font-size: 25px;
         line-height: 26px;
     }
 
-    .card p{
+    .card-front p{
         font-size: 10px;
     }
 
