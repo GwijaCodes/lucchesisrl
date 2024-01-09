@@ -154,9 +154,10 @@ navbarTemplate.innerHTML = `
             }
         
             .navbar .menu-items li{
-                font-size: .5rem;
+                font-size: .6rem;
                 max-width: 25vw;
                 height: 16px;
+                white-space: nowrap;
             }
         
             .logo{
