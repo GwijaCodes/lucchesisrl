@@ -141,7 +141,7 @@ header{
     margin-bottom: 16vh;
     display: flex;
     flex-direction: column;
-    gap: 10vh;
+    gap: 16vh;
 }
 
 .product-row{
@@ -155,7 +155,6 @@ header{
 }
 
 .product-row .codice{
-    padding-bottom: 10%;
     font-size: 16px;
     white-space: nowrap;
 }
