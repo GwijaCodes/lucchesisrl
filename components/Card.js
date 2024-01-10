@@ -128,6 +128,10 @@ cardTemplate.innerHTML = `
         .info p{
             font-size: 12px;
         }
+
+        .flip-card{
+            width: 100%;
+        }
     }
     </style>
 

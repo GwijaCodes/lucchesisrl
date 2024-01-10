@@ -239,12 +239,20 @@ header{
         margin-bottom: 4vh;
     }
 
+    .prodotti-text h2{
+        font-size: 40px;
+    }
+
+    .products-section{
+        gap: 6vh;
+    }
+
     .product-row, .switched{
         max-width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        gap: 6vh;
+        gap: 3vh;
         justify-content: center;
         align-items: start;
     }
