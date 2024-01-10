@@ -56,6 +56,12 @@ header{
     transform: scaleX(-1) translateY(-60%);
 }
 
+#ramo-limoni{
+    position: absolute;
+    max-width: 93.4%;
+    left: 0;
+}
+
 .marchio{
     position: absolute;
     width: 120px;
@@ -126,17 +132,36 @@ header{
 
 .prodotti p{
     font-family: 'Poppins';
-    width: 100%;
+    color: #1C6633;
 }
 
 .products-section{
     width: 80%;
     margin: 4% auto;
     margin-bottom: 16vh;
-    display: grid;
-    place-content: center;
-    grid-template-columns: repeat(auto-fill, 45%);
-    row-gap: 15vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+}
+
+.product-row{
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: start;
+    padding: 0 4vw;
+    gap: 2vw;
+}
+
+.product-row .codice{
+    padding-bottom: 10%;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.switched{
+    flex-flow: row-reverse;
+    justify-content: end;
 }
 
 /*card*/
@@ -161,6 +186,10 @@ header{
     }
 
     .limone-sm, .limone-pr{
+        display: none;
+    }
+
+    #ramo-limoni{
         display: none;
     }
 
@@ -210,11 +239,13 @@ header{
         margin-bottom: 4vh;
     }
 
-    .products-section{
+    .product-row, .switched{
         max-width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         gap: 6vh;
+        justify-content: center;
+        align-items: start;
     }
 }

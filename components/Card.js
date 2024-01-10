@@ -30,7 +30,7 @@ cardTemplate.innerHTML = `
         width: 100%;
         height: 100%;
         -webkit-backface-visibility: hidden;
-        border-radius: 20px;
+        border-radius: 4px;
     }
     
     .card-front-inner {
@@ -38,8 +38,8 @@ cardTemplate.innerHTML = `
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        border-radius: 20px;
-        background: linear-gradient(#FFF 0.31%, rgba(217, 217, 217, 0.00) 17.7%);
+        border-radius: 4px;
+        background: transparent;
         box-shadow: 0px 9px 9.3px 7px rgba(0, 0, 0, 0.25);
         transition: all .2s;    
         transform: rotateX(0deg); 
@@ -50,13 +50,17 @@ cardTemplate.innerHTML = `
         width: 100%;
         padding: 1.5em;
         padding-bottom: 2.2em;
-        border-radius: 20px;
+        border-radius: 4px;
         display: flex;
         flex-direction: column;
     }
+
+    .card-front-inner .info p{
+        font-size: 16px;
+    }
     
     .card-front-inner h4{
-        font-size: 1.8em;
+        font-size: 1.5em;
         line-height: 31px;
         font-weight: bold;
         font-family: 'caveat';
@@ -118,10 +122,11 @@ cardTemplate.innerHTML = `
 
     @media(max-width: 768px){
         .info h4{
-            font-size: 18px;
+            font-size: 20px;
+            white-space: nowrap;
         }
 
-        .flip-card p{
+        .info p{
             font-size: 12px;
         }
     }
