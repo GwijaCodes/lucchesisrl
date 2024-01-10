@@ -123,7 +123,6 @@ cardTemplate.innerHTML = `
     @media(max-width: 768px){
         .info h4{
             font-size: 20px;
-            white-space: nowrap;
         }
 
         .info p{
