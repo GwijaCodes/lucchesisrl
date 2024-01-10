@@ -255,7 +255,7 @@ header{
         justify-content: space-between;
         gap: 3vh;
         justify-content: center;
-        -webkit-align-items: start;
-        align-items: flex-end;
+        -webkit-align-items: flex-start;
+        align-items: flex-start;
     }
 }
