@@ -115,6 +115,23 @@
             scrollPaddingTop: "10vh"
         });
     }
+
+    //storic picture appear
+    function isInViewport(el){
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+    const foto = document.querySelector('#foto-storia');
+    document.addEventListener('scroll', function(){
+        if(isInViewport(foto)){
+            foto.classList.add('is-visible');
+        } 
+    })
    </script>
 </body>
 </html>
