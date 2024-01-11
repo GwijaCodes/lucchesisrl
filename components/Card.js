@@ -39,7 +39,7 @@ cardTemplate.innerHTML = `
         align-items: center;
         justify-content: space-between;
         border-radius: 4px;
-        background: transparent;
+        background: rgba(40, 40, 40, 0.26);
         box-shadow: 0px 9px 9.3px 7px rgba(0, 0, 0, 0.25);
         transition: all .2s;    
         transform: rotateX(0deg); 
@@ -88,6 +88,7 @@ cardTemplate.innerHTML = `
     }
 
     .card-back{
+        background: rgba(79, 79, 79, 0.36);
         box-shadow: 0px 5px 9.3px 7px rgba(0, 0, 0, 0.41);
     }
     
@@ -97,7 +98,6 @@ cardTemplate.innerHTML = `
         position: absolute;
         top: 0;
         left: 0;    
-        background-color: transparent;
         transform: rotateY(180deg);
     }
 

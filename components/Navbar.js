@@ -84,6 +84,17 @@ navbarTemplate.innerHTML = `
         }
         
         @media (max-width: 768px){
+            .menu-items li{
+                background: transparent;
+                box-shadow: none;
+                font-family: 'Poppins';
+            }
+
+
+            .menu-items li:hover{
+                box-shadow: none;
+            }
+
             .navbar-container input[type="checkbox"],
             .navbar-container .hamburger-lines{
                 display: block;
@@ -142,14 +153,12 @@ navbarTemplate.innerHTML = `
             }
         
             .navbar .menu-items{
-                background: transparent;
+                background: rgba(255, 242, 119, 0.51);
                 backdrop-filter: blur(1px);
                 box-shadow: 0px 4px 9.3px 2px rgba(0, 0, 0, 0.25);
-                border-radius: 4px;
                 padding: 4px;
                 display: flex;
-                max-width: 95vw;
-                margin: 0 auto;
+                max-width: 100vw;
                 transition: transform 0.5s ease-in-out;
                 transform: translateY(-300px);
             }

@@ -19,10 +19,6 @@ footerTemplate.innerHTML = `
       text-align: center;
   }
   
-  #lucchesi-footer{
-      font-family: 'Caveat';
-  }
-  
   .socials{
       height: 30px;
   }
@@ -42,6 +38,10 @@ footerTemplate.innerHTML = `
       position: relative;
       width: 100%;
       transform: translateY(10px);
+  }
+
+  span{
+    font-family: 'Poppins';
   }
 
   @media(max-width: 768px){
