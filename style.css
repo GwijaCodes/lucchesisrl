@@ -1,5 +1,39 @@
+/*SPLASH*/
+.splash{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180deg, #246F3B 19.41%, #84C040 71.91%, #64B245 100%);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: all .5s ease;
+    animation: splashanim .5s ease;
+}
+
+.splash svg{
+    max-width: 70vmin;
+}
+
+@keyframes splashanim{
+    from {
+        gap: 40vh;
+    }
+    
+    to {
+        gap: 10vh;
+    }
+}
+
+/*MAIN*/
 main{
     max-width: 90%;
+    overflow: hidden;
     background-color: #d2d2d2;
     background-image: url('./imgs/carta.webp');
     background-size: cover;
@@ -8,9 +42,9 @@ main{
 }
 
 h2{
-    font-family: 'Caveat';
-    font-weight: 700;
-    font-size: 50px;
+    font-family: 'Cocogoose';
+    font-weight: 400;
+    font-size: 40px;
 
 }
 
@@ -24,6 +58,8 @@ h2{
 header{
     display: grid;
     place-content: center;
+    background-color: #ffffff;
+    box-shadow: 0px 9px 9.3px 7px rgba(0, 0, 0, 0.25);
 }
 
 #lucchesi{
@@ -70,14 +106,19 @@ header{
     left: 85vw;
 }
 
-.storia, .prodotti, .chisiamo{
-    scroll-margin: 8vh;
+.storia, .chisiamo{
+    scroll-margin: 6vh;
+}
+.prodotti{
+    scroll-margin: 10vh;
+    
 }
 
-/*STORIA*/
+/*STORIA, CHI SIAMO*/
 
-.storia{
+.storia, .chisiamo{
     max-width: 80%;
+    min-height: 100vh;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, 50%);
@@ -86,13 +127,12 @@ header{
     color: #1C6633;
 }
 
-.storia h2{
+.storia h2, .chisiamo h2{
     margin-bottom: 30px;
-    font-family: 'Poppins';
     font-weight: 400;
 }
 
-.storia p{
+.storia p, .chisiamo p{
     font-size: 12px;
     font-family: 'Poppins';
 }
@@ -106,6 +146,12 @@ header{
     transition: all 1s;
     transform: translateX(-10%);
     opacity: 0;
+}
+
+#mano-albero{
+    max-width: 100%;
+    position: relative;
+    left: -10vw;
 }
 
 .is-visible{
@@ -127,8 +173,9 @@ header{
 }
 
 .prodotti h3{
-    font-family: 'Caveat';
-    font-size: 35px;
+    font-family: 'Cocogoose';
+    font-weight: 300;
+    font-size: 28px;
 }
 
 .prodotti p{
@@ -162,7 +209,7 @@ header{
 
 .switched{
     flex-flow: row-reverse;
-    justify-content: end;
+    justify-content: flex-start;
 }
 
 /*card*/
@@ -170,10 +217,18 @@ header{
 
 
 /*FOOTER*/
+#mappa{
+    position: relative;
+    left: 40%;
+    top: 100px;
+    width: 600px;
+    height: 50vh;
+}
+
 #template-phone {
     position: relative;
     width: 100%;
-    transform: translateY(10px);
+    transform: translateY(20px);
   }
 
 @media(max-width: 768px){
@@ -208,7 +263,7 @@ header{
         height: 100vh;
         place-content: center;
     }
-    .storia{
+    .storia, .chisiamo{
         display: flex;
         flex-direction: column-reverse;
         margin-bottom: 10vh;
@@ -257,5 +312,11 @@ header{
         justify-content: center;
         -webkit-align-items: flex-start;
         align-items: flex-start;
+    }
+
+    #mappa{
+        width: 100%;
+        position: static;
+        padding: 10vw;
     }
 }

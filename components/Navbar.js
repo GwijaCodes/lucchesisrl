@@ -20,13 +20,12 @@ navbarTemplate.innerHTML = `
             position: fixed;
             width: 100%;
             height: 60px;
-            background: linear-gradient(180deg, #268A42 36.91%, #1D6533 100%);
+            background: #268A42;
             color: #fff;
             z-index: 100;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-family: 'Caveat';
             font-weight: bold;
         }
         
@@ -43,29 +42,33 @@ navbarTemplate.innerHTML = `
         }
         
         .logo{
+            display: flex;
+            align-items: center;
+            -webkit-align-items: center;
+            gap: 6px;
             order: 1;
-            font-size: 20px;
-        }
-        
-        .logo{
+            font-size: 14px;
             text-shadow: 0px 4px 9.3px rgba(0, 0, 0, 0.25);
             cursor: pointer;
+            font-family: 'Cocogoose';
+            font-weight: 400;
         }
+
         
         .menu-items li{
             list-style: none;
             padding: 10px;
             width: 80px;
             height: 20px;
-            border-radius: 4px;
-            background: linear-gradient(180deg, #64B245 42.41%, #159A3F 82.91%);
-            box-shadow: 0px 4px 9.3px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 2px;
             margin: 0 10px;
             transition: all .2s;
             cursor: pointer;
             display: grid;
             place-content: center;
             color: #1C6633;
+            font-family: 'Poppins';
+            font-size: 14px;
         }
         
         .navbar a{
@@ -74,20 +77,15 @@ navbarTemplate.innerHTML = `
         }
         
         .navbar li:hover{
-            box-shadow: 0px 4px 9.3px 3px rgba(0, 0, 0, 0.46);
-        }
-        
-        .navbar li:active{
-            box-shadow: none;
+            text-shadow: 0px 0px 4px #E8D000;
             color: #fff;
-            transform: translateY(1px);
         }
+    
         
         @media (max-width: 768px){
             .menu-items li{
                 background: transparent;
                 box-shadow: none;
-                font-family: 'Poppins';
             }
 
 
@@ -171,12 +169,16 @@ navbarTemplate.innerHTML = `
             }
         
             .logo{
-                font-size: 14px;
+                font-size: 10px;
                 width: max-content;
                 position: absolute;
-                top: 40%;
-                left: 70%;
+                top: 35%;
+                left: 65%;
                 margin: auto 0;
+            }
+
+            .logo img{
+                width: 16px !important;
             }
         
             .navbar-container input[type="checkbox"]:checked ~ .menu-items{
@@ -210,10 +212,13 @@ navbarTemplate.innerHTML = `
                 <ul class="menu-items">
                     <li onclick = storiaScroller()>STORIA</li>
                     <li onclick = prodottiScroller()>PRODOTTI</li>
-                    <li><a href="#">CHI SIAMO</a></li>
+                    <li onclick = chisiamoScroller()>CHI SIAMO</li>
                     <li onclick = contattiScroller()>CONTATTI</li>
                 </ul>
-                <h1 class="logo"><a href="">LUCCHESI S.R.L.</a></h1>
+                <h1 class="logo">
+                    <img src="../imgs/marchio-carta.webp" style="width: 25px"/>
+                    <a href="">LUCCHESI S.R.L.</a>
+                </h1>
             </div>
         </nav>
 `

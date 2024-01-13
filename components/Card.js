@@ -11,6 +11,7 @@ cardTemplate.innerHTML = `
 
     .flip-card{
         width: 80%;
+        min-width: 80%;
         height: fit-content;
         margin: auto;
         perspective: 3000px;
@@ -30,7 +31,6 @@ cardTemplate.innerHTML = `
         width: 100%;
         height: 100%;
         -webkit-backface-visibility: hidden;
-        border-radius: 4px;
     }
     
     .card-front-inner {
@@ -38,8 +38,7 @@ cardTemplate.innerHTML = `
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        border-radius: 4px;
-        background: rgba(40, 40, 40, 0.26);
+        background: rgba(41, 41, 41, 0.07);
         box-shadow: 0px 9px 9.3px 7px rgba(0, 0, 0, 0.25);
         transition: all .2s;    
         transform: rotateX(0deg); 
@@ -60,10 +59,10 @@ cardTemplate.innerHTML = `
     }
     
     .card-front-inner h4{
-        font-size: 1.5em;
+        font-size: 1em;
         line-height: 31px;
-        font-weight: bold;
-        font-family: 'caveat';
+        font-family: 'Cocogoose';
+        font-weight: 400;
         margin-bottom: 4%;
     }
     
@@ -88,7 +87,7 @@ cardTemplate.innerHTML = `
     }
 
     .card-back{
-        background: rgba(79, 79, 79, 0.36);
+        background: rgba(41, 41, 41, 0.07);
         box-shadow: 0px 5px 9.3px 7px rgba(0, 0, 0, 0.41);
     }
     
@@ -120,6 +119,25 @@ cardTemplate.innerHTML = `
         max-width: 30%;
     }
 
+    .turnme{
+        position: absolute;
+        bottom: 1.4em;
+        right: 0;
+        width: 40px;
+        height: 50px;
+        border-radius: 90px 0px 0px 90px;
+        background: #1C6633;
+        padding: 4%;
+        display: grid;
+        place-content: center;
+    }
+
+    .turnme img{
+        max-width: 100%;
+        margin: auto;
+        margin-left: 4px;
+    }
+
     @media(max-width: 768px){
         .info h4{
             font-size: 20px;
@@ -147,6 +165,9 @@ cardTemplate.innerHTML = `
                     </div>
                 </div>
                 <div class="card-front-inner">
+                    <div class="turnme">
+                        <img src="../imgs/turnme.png"/>
+                    </div>
                     <section class="product-pic">
                           <img />
                     </section>

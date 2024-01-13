@@ -63,6 +63,7 @@ footerTemplate.innerHTML = `
         <div class="socials">
             <a href=""><img src="./imgs/instagram.png" alt="instagram"></a>
             <a href=""><img src="./imgs/facebook.png" alt="facebook"></a>
+            <a href="mailto:lucchesisrl@virgilio.it"><img src="./imgs/mail.png" alt="mail"></a>
         </div>
             <p>Copyright  Lucchesi Srl ©2024 - Via G.Marconi 58/60 Acicatena (CT) <br>
             lucchesisrl@virgilio.it - Tel. +39 095 801611  PI 03590470872</p>
