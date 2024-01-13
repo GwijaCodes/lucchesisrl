@@ -216,7 +216,7 @@ navbarTemplate.innerHTML = `
                     <li onclick = contattiScroller()>CONTATTI</li>
                 </ul>
                 <h1 class="logo">
-                    <img src="../imgs/marchio-carta.webp" style="width: 25px"/>
+                    <img src="" style="width: 25px"/>
                     <a href="">LUCCHESI S.R.L.</a>
                 </h1>
             </div>
@@ -230,6 +230,14 @@ class Navbar extends HTMLElement {
         super()
         const shadow = this.attachShadow({ mode: "open" });
         shadow.append(navbarTemplate.content.cloneNode(true));
+    }
+
+    static get observedAttributes(){
+        return['brand'];
+    }
+
+    attributeChangedCallback(name, oldValue, newValue) {
+        this.shadowRoot.querySelector('.logo img').src = this.getAttribute('brand');
     }
 }
 

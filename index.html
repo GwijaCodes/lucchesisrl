@@ -29,7 +29,7 @@
     </style>
 </head>
 <body>
-    <nav-bar></nav-bar>
+    <nav-bar brand="./imgs/marchio-carta.webp"></nav-bar>
     <img src="./imgs/lumia-grande.webp" alt="fetta di limone" class="limone">
     <img src="./imgs/limonis.webp" alt="fetta di limone" class="limone-sm">
     <img src="./imgs/marchio-carta.webp" alt="marchio lucchesi limone" class="marchio">
@@ -133,6 +133,9 @@
    <script>
     //splashscreen
     const splash = document.querySelector('.splash');
+    const body = document.querySelector('body');
+
+    body.style.height = '100vh';
     window.setTimeout(() => {
         splash.style.left = '-100%';
         splash.style.opacity = '0';
