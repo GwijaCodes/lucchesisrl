@@ -103,20 +103,21 @@ cardTemplate.innerHTML = `
     .card-back-inner{
         width: 100%;
         height: 100%;
-        display: grid;
-        place-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8%;
         padding: 10% 0;
     }
 
     .card-back-inner a{
-        width: 100%;
-        height: 100%;
         display: grid;
         place-items: center;
     }
     
     .card-back-inner img{
-        max-width: 30%;
+        max-width: 50%;
     }
 
     .turnme{
@@ -158,18 +159,18 @@ cardTemplate.innerHTML = `
             <div class="card-inner">
                 <div class="card-back">
                     <div class="card-back-inner">
-                        <a href="../imgs/succo-arance.pdf" download="">
-                            <img />
-                        </a>
                         <h3>Scheda Tecnica</h3>
+                        <a href="../imgs/succo-arance.pdf" download="">
+                            <img src=""/>
+                        </a>
                     </div>
                 </div>
                 <div class="card-front-inner">
                     <div class="turnme">
-                        <img src="../imgs/turnme.png"/>
+                        <img src=""/>
                     </div>
                     <section class="product-pic">
-                          <img />
+                          <img src=""/>
                     </section>
                     <section class="info">
                         <h4><slot name='product-name'>Nome prodotto</slot></h4>
@@ -193,6 +194,8 @@ class Card extends HTMLElement {
 
     attributeChangedCallback(name, oldValue, newValue) {
         this.shadowRoot.querySelector('.product-pic img').src = this.getAttribute('prodotto');
+        this.shadowRoot.querySelector('.turnme img').src = this.getAttribute('freccia');
+        this.shadowRoot.querySelector('.card-back-inner img').src = this.getAttribute('download');
     }
 
     flipMe = () => {

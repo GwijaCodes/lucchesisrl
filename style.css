@@ -245,7 +245,7 @@ header{
 #template-phone {
     position: relative;
     width: 100%;
-    transform: translateY(50px);
+    transform: translateY(10%);
   }
 
 @media(max-width: 768px){
@@ -283,7 +283,8 @@ header{
     .storia, .chisiamo{
         display: flex;
         flex-direction: column-reverse;
-        margin-bottom: 10vh;
+        justify-content: space-around;
+        margin: 10vh auto;
     }
 
     .storia-text{
