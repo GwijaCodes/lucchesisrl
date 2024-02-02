@@ -8,12 +8,12 @@
     <script src="./components/Navbar.js"></script>
     <script src="./components/Footer.js"></script>
     <script src="./components/Card.js"></script>
-    <link rel="shortcut icon" href="./imgs/marchio-carta.webp" type="image/x-icon">
+    <link rel="shortcut icon" href="./imgs/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.cdnfonts.com/css/cocogoose" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
-    <title>Lucchesi s.r.l.</title>
+    <title>Lucchesi s.r.l. | Spremute di agrumi surgelate</title>
     <style>
         *{
             box-sizing: border-box;
@@ -30,13 +30,12 @@
 </head>
 <body>
     <nav-bar brand="./imgs/marchio-carta.webp"></nav-bar>
-    <img src="./imgs/lumia-grande.png" alt="fetta di limone" class="limone">
     <img src="./imgs/limonis.webp" alt="fetta di limone" class="limone-sm">
     <img src="./imgs/marchio-carta.webp" alt="marchio lucchesi limone" class="marchio">
    <main>
         <header>
-             <img id="lucchesi" src="./imgs/lucchesi.webp" alt="">
-            </div>
+            <h1>LUCCHESI S.R.L.</h1>
+            <p>Spremute surgelate di agrumi</p>
         </header>
         <div class="storia">
             <img id="foto-storia" src="./imgs/foto-storia.webp" alt="lucchesi anni 50">
@@ -110,13 +109,24 @@
                 <h2>Dall'albero a Voi</h2>
                     <p>La <b>nostra azienda</b> ha sede nel territorio di <b>Aci Catena</b>, tra l’Etna e il Mare. Zona alquanto ricca di "giardini" dove si coltivano agrumi d'eccellenza quali il <b>limone verdello</b> dal succo molto utilizzato come base per freschissime bevande.
                         Grazie al vulcano e alle forti escursioni termiche tra giorno e notte nascono le <b>arance rosse</b>, ricchissime di antocianine e dunque formidabili anti-età.
-                        <b>Noi</b> raccogliamo e lavoriamo artigianalmente limoni, arance rosse, arance bionde, mandarini per la produzione di succhi freschi congelati e di essenza. Il <b>succo</b> è il cuore della nostra produzione artigianale, la <b>scorza</b> per la produzione di olio essenziale. Il rispetto rigoroso della catena del freddo, dona ai nostri prodotti tutto il profumo e il sapore del frutto appena raccolto e subito spremuto. </p>
+                    <b>Noi</b> raccogliamo e lavoriamo artigianalmente limoni, arance rosse, arance bionde, mandarini per la produzione di succhi freschi congelati e di essenza. Il <b>succo</b> è il cuore della nostra produzione artigianale, la <b>scorza</b> per la produzione di olio essenziale. Il rispetto rigoroso della catena del freddo, dona ai nostri prodotti tutto il profumo e il sapore del frutto appena raccolto e subito spremuto. </p>
             </div>
-    <img src="./imgs/limonis.webp" alt="fetta di limone" class="limone-pr">
+      
+            <div id="slider">
+                <figure>
+                    <img src="./imgs/1.jpg" alt="">
+                    <img src="./imgs/2.jpg" alt="">
+                    <img src="./imgs/3.jpg" alt="">
+                    <img src="./imgs/2.jpg" alt="">
+                    <img src="./imgs/1.jpg" alt="">
+                    <img src="./imgs/2.jpg" alt="">
+                </figure>
+            </div>
+
         </div>
         <h2 id="contattaci" style="width: 100%; text-align: center; color:#1D6533; padding-top: 10vh">Contattaci</h2>
         <iframe id="mappa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3160.9672787322734!2d15.138103270293978!3d37.60292910860839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1313f94662c7f753%3A0xf847945aab6421f2!2sLucchesi%20Abbreviata%20Lucchesi%20S!5e0!3m2!1sit!2sit!4v1705136855800!5m2!1sit!2sit" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <img id="template-phone" src="./imgs/template-phone.webp" alt="social">
+        <img id="template-phone" src="./imgs/template-phone.png" alt="social">
    </main>
    <my-footer></my-footer>
    <div class="splash">
@@ -126,6 +136,10 @@
     </div>
     <img src="./imgs/marchio-carta.webp" alt="marchio lucchesi" style="max-width: 10vmin;">
    </div>
+
+
+
+
    <script>
     //splashscreen
     const splash = document.querySelector('.splash');
@@ -135,7 +149,7 @@
     window.setTimeout(() => {
         splash.style.left = '-100%';
         splash.style.opacity = '0';
-    }, 2500)
+    }, 2000)
 
     //navbar scroll buttons
     const storiaSection = document.querySelector('.storia');
