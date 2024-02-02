@@ -336,6 +336,9 @@ h1, header p{
     .marchio{
         width: 50px;
     }
+    h1 {
+        font-size: 4vh;
+    }
 
     .limone{
         top: 10%;
