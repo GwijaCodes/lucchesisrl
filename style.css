@@ -270,7 +270,8 @@ h1, header p{
     overflow: hidden;
     height: 40vh;
     position: absolute;
-    bottom: 10vh;
+    left: 0;
+    top: 110%;
     width: 100%;
 }
 
