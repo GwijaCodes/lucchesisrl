@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,24 +16,25 @@
     <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
     <title>Lucchesi s.r.l. | Spremute di agrumi surgelate</title>
     <style>
-        *{
+        * {
             box-sizing: border-box;
             padding: 0;
             margin: 0;
         }
 
-        body{
+        body {
             background: url('./imgs/gradient.png');
             font-family: sans-serif;
             overflow-x: hidden;
         }
     </style>
 </head>
+
 <body>
     <nav-bar brand="./imgs/marchio-carta.webp"></nav-bar>
     <img src="./imgs/limonis.webp" alt="fetta di limone" class="limone-sm">
     <img src="./imgs/marchio-carta.webp" alt="marchio lucchesi limone" class="marchio">
-   <main>
+    <main>
         <header>
             <h1>LUCCHESI S.R.L.</h1>
             <p>Spremute surgelate di agrumi</p>
@@ -41,26 +43,32 @@
             <img id="foto-storia" src="./imgs/foto-storia.webp" alt="lucchesi anni 50">
             <div class="storia-text">
                 <h2><span style="font-size: 30px;">La</span> Storia</h2>
-                    <p>Una storia da ben quattro generazioni, strettamente legata al territorio siciliano dove nasce l’azienda “Lucchesi.” <br> <br>
-                    Il nostro capostipite <b>Salvatore Lucchesi</b> fonda l'azienda negli anni '50, quando gli agrumi spopolano nell'economia siciliana e il settore dei succhi e delle essenze sono un principale indotto. <br> <br>
-                    La Sicilia, in particolare l'area dell'Etna, è fortemente predisposta all'agrumicoltura e soprattutto alla limonicoltura. <br> <br>
-                    Con lo stesso entusiasmo del nonno e del padre, oggi noi fratelli Lucchesi produciamo succhi ed essenze di agrumi di altissima <b>qualità</b>, raggiungendo tutto il territorio internazionale, rendendo un sogno realtà! <br> <br>
-                    Grazie ad una alta qualità dovuta all'esperienza, acquisita di padre in figli, alla profonda conoscenza della frutta e, non ultima, alla contiguità tra gli agrumeti e lo stabilimento, vi garantiamo freschezza e fragranza del prodotto, tutto made in <b>Sicily</b>.</p>
+                <p>Una storia da ben quattro generazioni, strettamente legata al territorio siciliano dove nasce
+                    l’azienda “Lucchesi.” <br> <br>
+                    Il nostro capostipite <b>Salvatore Lucchesi</b> fonda l'azienda negli anni '50, quando gli agrumi
+                    spopolano nell'economia siciliana e il settore dei succhi e delle essenze sono un principale
+                    indotto. <br> <br>
+                    La Sicilia, in particolare l'area dell'Etna, è fortemente predisposta all'agrumicoltura e
+                    soprattutto alla limonicoltura. <br> <br>
+                    Con lo stesso entusiasmo del nonno e del padre, oggi noi fratelli Lucchesi produciamo succhi ed
+                    essenze di agrumi di altissima <b>qualità</b>, raggiungendo tutto il territorio internazionale,
+                    rendendo un sogno realtà! <br> <br>
+                    Grazie ad una alta qualità dovuta all'esperienza, acquisita di padre in figli, alla profonda
+                    conoscenza della frutta e, non ultima, alla contiguità tra gli agrumeti e lo stabilimento, vi
+                    garantiamo freschezza e fragranza del prodotto, tutto made in <b>Sicily</b>.</p>
             </div>
-    <img src="./imgs/limonis.webp" alt="fetta di limone" class="limone-pr">
+            <img src="./imgs/limonis.webp" alt="fetta di limone" class="limone-pr">
         </div>
         <div class="prodotti">
-            <div class="prodotti-text"> 
+            <div class="prodotti-text">
                 <h2>I nostri Prodotti</h2>
-                 <h3>Succhi</h3>
+                <h3>Succhi</h3>
                 <p>Pronti surgelati, sono ideali per la preparazione di: gelati, dolci, bibite, cocktails.</p>
             </div>
             <img id="ramo-limoni" src="./imgs/ramo-limoni.png" alt="">
             <section class="products-section">
                 <div class="product-row">
-                    <my-card prodotto="imgs/cassa.webp" 
-                             freccia="./imgs/turnme.png"
-                             download="./imgs/download.png">
+                    <my-card prodotto="imgs/cassa.webp" freccia="./imgs/turnme.png" download="./imgs/download.png">
                         <h4 slot="product-name">Succo Di Limone Surgelato</h4>
                         <p slot="product-description">
                             Scatola KG 12</p>
@@ -69,142 +77,152 @@
                         Cod. 138 - Buste - KG 0,5</p>
                 </div>
                 <div class="product-row switched">
-                    <my-card prodotto="imgs/arancia-cassa.png" 
-                             freccia="./imgs/turnme.png">
+                    <my-card prodotto="imgs/arancia-cassa.png" freccia="./imgs/turnme.png">
                         <h4 slot="product-name">Succo d'Arancia Surgelato</h4>
                         <p slot="product-description">
                             Scatola KG 12</p>
                     </my-card>
                     <p class="codice">Cod. 123 - Buste - KG 1 <br>
-                       Cod. 138 - Buste - KG 0,5</p>
+                        Cod. 138 - Buste - KG 0,5</p>
                 </div>
                 <div class="product-row">
-                    <my-card prodotto="imgs/succo-limone.png" 
-                             freccia="./imgs/turnme.png">
+                    <my-card prodotto="imgs/succo-limone.png" freccia="./imgs/turnme.png">
                         <h4 slot="product-name">Succo di Limone Surgelato</h4>
                         <p slot="product-description">
                             Busta 1 LT</p>
                     </my-card>
                     <p class="codice">Cod. 123 - Buste - KG 1 <br>
-                       Cod. 138 - Buste - KG 0,5</p>
+                        Cod. 138 - Buste - KG 0,5</p>
                 </div>
                 <div class="product-row switched">
-                    <my-card prodotto="imgs/arancia-rossa.png" 
-                             freccia="./imgs/turnme.png">
+                    <my-card prodotto="imgs/arancia-rossa.png" freccia="./imgs/turnme.png">
                         <h4 slot="product-name">Succo di Mandarino Surgelato</h4>
                         <p slot="product-description">
                             Scatola KG 12</p>
                     </my-card>
                     <p class="codice">Cod. 123 - Buste - KG 1 <br>
-                       Cod. 138 - Buste - KG 0,5</p>
+                        Cod. 138 - Buste - KG 0,5</p>
                 </div>
-                    
-                </section>
-               
-            </div>
+
+            </section>
+
+        </div>
         </div>
         <div class="chisiamo">
-            <img id="mano-albero" src="./imgs/mano.png" alt="mano albero limoni">
-            <div class="chisiamo-text">
-                <h2>Dall'albero a Voi</h2>
-                    <p>La <b>nostra azienda</b> ha sede nel territorio di <b>Aci Catena</b>, tra l’Etna e il Mare. Zona alquanto ricca di "giardini" dove si coltivano agrumi d'eccellenza quali il <b>limone verdello</b> dal succo molto utilizzato come base per freschissime bevande.
-                        Grazie al vulcano e alle forti escursioni termiche tra giorno e notte nascono le <b>arance rosse</b>, ricchissime di antocianine e dunque formidabili anti-età.
-                    <b>Noi</b> raccogliamo e lavoriamo artigianalmente limoni, arance rosse, arance bionde, mandarini per la produzione di succhi freschi congelati e di essenza. Il <b>succo</b> è il cuore della nostra produzione artigianale, la <b>scorza</b> per la produzione di olio essenziale. Il rispetto rigoroso della catena del freddo, dona ai nostri prodotti tutto il profumo e il sapore del frutto appena raccolto e subito spremuto. </p>
+            <div class="chisiamo-up">
+                <img id="mano-albero" src="./imgs/mano.png" alt="mano albero limoni">
+                <div class="chisiamo-text">
+                    <h2>Dall'albero a Voi</h2>
+                    <p>La <b>nostra azienda</b> ha sede nel territorio di <b>Aci Catena</b>, tra l’Etna e il Mare. Zona
+                        alquanto ricca di "giardini" dove si coltivano agrumi d'eccellenza quali il <b>limone
+                            verdello</b> dal succo molto utilizzato come base per freschissime bevande.
+                        Grazie al vulcano e alle forti escursioni termiche tra giorno e notte nascono le <b>arance
+                            rosse</b>, ricchissime di antocianine e dunque formidabili anti-età.
+                        <b>Noi</b> raccogliamo e lavoriamo artigianalmente limoni, arance rosse, arance bionde,
+                        mandarini per la produzione di succhi freschi congelati e di essenza. Il <b>succo</b> è il cuore
+                        della nostra produzione artigianale, la <b>scorza</b> per la produzione di olio essenziale. Il
+                        rispetto rigoroso della catena del freddo, dona ai nostri prodotti tutto il profumo e il sapore
+                        del frutto appena raccolto e subito spremuto.
+                    </p>
+                </div>
             </div>
-      
-            <div id="slider">
-                <figure>
-                    <img src="./imgs/1.jpg" alt="">
-                    <img src="./imgs/2.jpg" alt="">
-                    <img src="./imgs/3.jpg" alt="">
-                    <img src="./imgs/2.jpg" alt="">
-                    <img src="./imgs/1.jpg" alt="">
-                    <img src="./imgs/2.jpg" alt="">
-                </figure>
+            <div class="chisiamo-down">
+                <div id="slider">
+                    <figure>
+                        <img src="./imgs/1.jpg" alt="">
+                        <img src="./imgs/2.jpg" alt="">
+                        <img src="./imgs/3.jpg" alt="">
+                        <img src="./imgs/2.jpg" alt="">
+                        <img src="./imgs/1.jpg" alt="">
+                        <img src="./imgs/2.jpg" alt="">
+                    </figure>
+                </div>
             </div>
 
         </div>
         <h2 id="contattaci" style="width: 100%; text-align: center; color:#1D6533; padding-top: 10vh">Contattaci</h2>
-        <iframe id="mappa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3160.9672787322734!2d15.138103270293978!3d37.60292910860839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1313f94662c7f753%3A0xf847945aab6421f2!2sLucchesi%20Abbreviata%20Lucchesi%20S!5e0!3m2!1sit!2sit!4v1705136855800!5m2!1sit!2sit" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe id="mappa"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3160.9672787322734!2d15.138103270293978!3d37.60292910860839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1313f94662c7f753%3A0xf847945aab6421f2!2sLucchesi%20Abbreviata%20Lucchesi%20S!5e0!3m2!1sit!2sit!4v1705136855800!5m2!1sit!2sit"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <img id="template-phone" src="./imgs/template-phone.png" alt="social">
-   </main>
-   <my-footer></my-footer>
-   <div class="splash">
-    <div class="splashtext">
-        <h2>Lucchesi s.r.l.</h2>
-        <h2>Lucchesi s.r.l.</h2>   
+    </main>
+    <my-footer></my-footer>
+    <div class="splash">
+        <div class="splashtext">
+            <h2>Lucchesi s.r.l.</h2>
+            <h2>Lucchesi s.r.l.</h2>
+        </div>
+        <img src="./imgs/marchio-carta.webp" alt="marchio lucchesi" style="max-width: 10vmin;">
     </div>
-    <img src="./imgs/marchio-carta.webp" alt="marchio lucchesi" style="max-width: 10vmin;">
-   </div>
 
 
 
 
-   <script>
-    //splashscreen
-    const splash = document.querySelector('.splash');
-    const body = document.querySelector('body');
+    <script>
+        //splashscreen
+        const splash = document.querySelector('.splash');
+        const body = document.querySelector('body');
 
-    body.style.height = '100vh';
-    window.setTimeout(() => {
-        splash.style.left = '-100%';
-        splash.style.opacity = '0';
-    }, 2000)
+        body.style.height = '100vh';
+        window.setTimeout(() => {
+            splash.style.left = '-100%';
+            splash.style.opacity = '0';
+        }, 2000)
 
-    //navbar scroll buttons
-    const storiaSection = document.querySelector('.storia');
-    const prodottiSection = document.querySelector('.prodotti');
-    const chisiamoSection = document.querySelector('.chisiamo');
-    const contattiSection = document.querySelector('#contattaci');
-    function storiaScroller(){
-        storiaSection.scrollIntoView({ 
-            behavior: "smooth", 
-            block: 'start', 
-            inline: 'start',
-            scrollPaddingTop: "10vh"
-        });
-    }
-    function prodottiScroller(){
-        prodottiSection.scrollIntoView({ 
-            behavior: "smooth", 
-            block: 'start', 
-            inline: 'start',
-            scrollPaddingTop: "16vh"
-        });
-    }
-    function chisiamoScroller(){
-        chisiamoSection.scrollIntoView({ 
-            behavior: "smooth", 
-            block: 'start', 
-            inline: 'start',
-            scrollPaddingTop: "10vh"
-        });
-    }
-    function contattiScroller(){
-        contattiSection.scrollIntoView({ 
-            behavior: "smooth", 
-            block: 'start', 
-            scrollPaddingTop: "10vh"
-        });
-    }
+        //navbar scroll buttons
+        const storiaSection = document.querySelector('.storia');
+        const prodottiSection = document.querySelector('.prodotti');
+        const chisiamoSection = document.querySelector('.chisiamo');
+        const contattiSection = document.querySelector('#contattaci');
+        function storiaScroller() {
+            storiaSection.scrollIntoView({
+                behavior: "smooth",
+                block: 'start',
+                inline: 'start',
+                scrollPaddingTop: "10vh"
+            });
+        }
+        function prodottiScroller() {
+            prodottiSection.scrollIntoView({
+                behavior: "smooth",
+                block: 'start',
+                inline: 'start',
+                scrollPaddingTop: "16vh"
+            });
+        }
+        function chisiamoScroller() {
+            chisiamoSection.scrollIntoView({
+                behavior: "smooth",
+                block: 'start',
+                inline: 'start',
+                scrollPaddingTop: "10vh"
+            });
+        }
+        function contattiScroller() {
+            contattiSection.scrollIntoView({
+                behavior: "smooth",
+                block: 'start',
+                scrollPaddingTop: "10vh"
+            });
+        }
 
-    //storic picture appear
-    function isInViewport(el){
-        const rect = el.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-    const foto = document.querySelector('#foto-storia');
-    document.addEventListener('scroll', function(){
-        if(isInViewport(foto)){
-            foto.classList.add('is-visible');
-        } 
-    })
-   </script>
+        //storic picture appear
+        function isInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+        const foto = document.querySelector('#foto-storia');
+        document.addEventListener('scroll', function () {
+            if (isInViewport(foto)) {
+                foto.classList.add('is-visible');
+            }
+        })
+    </script>
 </body>
-</html>
 
+</html>
