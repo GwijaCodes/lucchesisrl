@@ -16,7 +16,7 @@ cardTemplate.innerHTML = `
         margin: auto;
         perspective: 3000px;
         cursor: pointer;
-        color: #1C6633;
+        color: #268A42;
     }
     
     .card-inner{
@@ -127,7 +127,7 @@ cardTemplate.innerHTML = `
         width: 40px;
         height: 50px;
         border-radius: 90px 0px 0px 90px;
-        background: #1C6633;
+        background: #268A42;
         padding: 4%;
         display: grid;
         place-content: center;

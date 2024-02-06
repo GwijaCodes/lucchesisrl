@@ -68,6 +68,11 @@ h2 {
 
 }
 
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
 .prodotti,
 .storia,
 header {
@@ -163,9 +168,8 @@ header p {
     scroll-margin: 8vh;
 }
 
-.prodotti {
+.prodotti, .contattaci {
     scroll-margin: 10vh;
-
 }
 
 /*STORIA, CHI SIAMO*/
@@ -179,7 +183,7 @@ header p {
     grid-template-columns: repeat(auto-fill, 50%);
     place-content: center;
     font-family: 'Poppins';
-    color: #1C6633;
+    color: #268A42;
 }
 
 .storia h2,
@@ -219,7 +223,7 @@ header p {
 /*PRODOTTI*/
 
 .prodotti-text {
-    color: #1C6633;
+    color: #268A42;
     max-width: 70%;
     margin: auto;
 }
@@ -238,7 +242,7 @@ header p {
 
 .prodotti p {
     font-family: 'Poppins';
-    color: #1C6633;
+    color: #268A42;
 }
 
 .products-section {
@@ -303,6 +307,52 @@ header p {
     float: left;
 }
 
+/*CONTACT*/
+
+.contattaci{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    width: 100%;
+    height: 60vh;
+    color: #268A42;
+    margin: 20% 0;
+}
+
+.contact-info, .contact-img{
+    width: 50%; height: 100%;
+}
+
+.contact-img{
+    object-fit: cover;
+}
+
+.contact-info{
+    padding: 0 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.contact-info span{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info img{
+    width: 20px;
+}
+
+#mappa {
+    width: 100%;
+    height: 50vh;
+    box-shadow: 0px 9px 9.3px 7px rgba(0, 0, 0, 0.25);
+}
+
+
 @keyframes slider {
     0% {
         left: 0;
@@ -342,14 +392,6 @@ header p {
 }
 
 /*FOOTER*/
-#mappa {
-    position: relative;
-    left: 40%;
-    top: 100px;
-    width: 600px;
-    height: 50vh;
-    box-shadow: 0px 9px 9.3px 7px rgba(0, 0, 0, 0.25);
-}
 
 #template-phone {
     position: relative;
@@ -475,9 +517,11 @@ header p {
         align-items: flex-start;
     }
 
-    #mappa {
-        max-width: 80%;
-        position: static;
-        margin: auto;
+    .contact-info{
+        width: 100%;
+    }
+
+    .contact-img{
+        display: none;
     }
 }
