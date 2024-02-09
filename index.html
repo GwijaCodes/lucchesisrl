@@ -128,12 +128,12 @@
             <div class="chisiamo-down">
                 <div id="slider">
                     <figure>
-                        <img src="./imgs/1.jpg" alt="">
-                        <img src="./imgs/2.jpg" alt="">
-                        <img src="./imgs/3.jpg" alt="">
-                        <img src="./imgs/2.jpg" alt="">
-                        <img src="./imgs/1.jpg" alt="">
-                        <img src="./imgs/2.jpg" alt="">
+                        <img src="./imgs/slider/1.jpg" alt="">
+                        <video src="./imgs/slider/1.mp4" autoplay preload muted  loop></video>
+                        <video src="./imgs/slider/2.mp4" autoplay  preload muted loop></video>
+                        <video src="./imgs/slider/3.mp4" autoplay preload muted loop></video>
+                        <video src="./imgs/slider/4.mp4" autoplay preload muted loop></video>
+                        <video src="./imgs/slider/5.mp4" autoplay preload muted loop></video>
                     </figure>
                 </div>
             </div>
@@ -236,6 +236,23 @@
                 foto.classList.add('is-visible');
             }
         })
+
+        //slider animation
+        const slider = document.querySelector('#slider figure');
+        let slideQ = 0;
+        
+        window.setInterval(() => {
+            console.log(slideQ)
+            slider.style.left = slideQ + '%';
+            if (slideQ == -200) {
+                    slideQ = 0
+            } else {
+                slider.style.transition = 'left .8s ease'
+                slideQ -= 50;
+            }
+        }, 5000)
+
+        
     </script>
 </body>
 

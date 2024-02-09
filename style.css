@@ -304,11 +304,13 @@ header p {
     width: 500%;
     margin: 0;
     left: 0;
-    animation: 16s slider infinite;
+    /*animation: 30s slider infinite;*/
 }
 
-#slider figure img {
+#slider figure img,
+#slider figure video {
     width: 10%;
+    height: 100%;
     float: left;
 }
 
@@ -360,40 +362,32 @@ header p {
 
 
 @keyframes slider {
-    0% {
+    0%, 10%{
         left: 0;
     }
 
-    20% {
-        left: 0;
-    }
-
-    25% {
+    10%, 20%{
         left: -50%;
     }
 
-    45% {
-        left: -50%;
-    }
-
-    50% {
+    30%, 70%{
         left: -100%;
     }
 
-    70% {
-        left: -100%;
-    }
-
-    75% {
+    84%, 100% {
         left: -150%;
     }
 
-    95% {
-        left: -150%;
+    -- {
+        left: -200%;
+    }
+
+    -- {
+        left: -250%;
     }
 
     100% {
-        left: -200%;
+        left: -300%;
     }
 }
 
