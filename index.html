@@ -32,7 +32,7 @@
 
 <body>
     <nav-bar brand="./imgs/marchio-carta.webp"></nav-bar>
-    <img src="./imgs/limonis.webp" alt="fetta di limone" class="limone-sm">
+    <img src="./imgs/limonis.png" alt="fetta di limone" class="limone-sm">
     <img src="./imgs/marchio-carta.webp" alt="marchio lucchesi limone" class="marchio">
     <main>
         <header>
@@ -57,7 +57,7 @@
                     conoscenza della frutta e, non ultima, alla contiguità tra gli agrumeti e lo stabilimento, vi
                     garantiamo freschezza e fragranza del prodotto, tutto made in <b>Sicily</b>.</p>
             </div>
-            <img src="./imgs/limonis.webp" alt="fetta di limone" class="limone-pr">
+            <img src="./imgs/limonis.png" alt="fetta di limone" class="limone-pr">
         </div>
         <div class="prodotti">
             <div class="prodotti-text">
@@ -67,17 +67,11 @@
             </div>
             <img id="ramo-limoni" src="./imgs/ramo-limoni.png" alt="">
             <section class="products-section">
-                <div class="product-row">
-                    <my-card prodotto="imgs/cassa.webp" freccia="./imgs/turnme.png" download="./imgs/download.png">
-                        <h4 slot="product-name">Succo Di Limone Surgelato</h4>
-                        <p slot="product-description">
-                            Scatola KG 12</p>
-                    </my-card>
-                    <p class="codice">Cod. 123 - Buste - KG 12 <br>
-                        Cod. 138 - Buste - KG 0,5</p>
-                </div>
-                <div class="product-row switched">
-                    <my-card prodotto="imgs/arancia-cassa.png" freccia="./imgs/turnme.png">
+                <div class="product-row ">
+                    <my-card 
+                        prodotto="imgs/arancia-cassa.png" 
+                        freccia="./imgs/turnme.png" 
+                        pdf="./imgs/pdf/arance.pdf">
                         <h4 slot="product-name">Succo d'Arancia Surgelato</h4>
                         <p slot="product-description">
                             Scatola KG 12</p>
@@ -85,8 +79,11 @@
                     <p class="codice">Cod. 123 - Buste - KG 1 <br>
                         Cod. 138 - Buste - KG 0,5</p>
                 </div>
-                <div class="product-row">
-                    <my-card prodotto="imgs/succo-limone.png" freccia="./imgs/turnme.png">
+                <div class="product-row switched">
+                    <my-card 
+                        prodotto="imgs/succo-limone.png" 
+                        freccia="./imgs/turnme.png"
+                        pdf="./imgs/pdf/limone.pdf">
                         <h4 slot="product-name">Succo di Limone Surgelato</h4>
                         <p slot="product-description">
                             Busta 1 LT</p>
@@ -94,8 +91,11 @@
                     <p class="codice">Cod. 123 - Buste - KG 1 <br>
                         Cod. 138 - Buste - KG 0,5</p>
                 </div>
-                <div class="product-row switched">
-                    <my-card prodotto="imgs/arancia-rossa.png" freccia="./imgs/turnme.png">
+                <div class="product-row">
+                    <my-card 
+                        prodotto="imgs/arancia-rossa.png" 
+                        freccia="./imgs/turnme.png"
+                        pdf="./imgs/pdf/mandarino.pdf">
                         <h4 slot="product-name">Succo di Mandarino Surgelato</h4>
                         <p slot="product-description">
                             Scatola KG 12</p>
@@ -104,6 +104,45 @@
                         Cod. 138 - Buste - KG 0,5</p>
                 </div>
 
+            </section>
+            <div class="prodotti-text">
+                <h3>Olii Essenziali</h3>
+                <p>Ricavati dalle scorze di agrumi, conservano tutto il profumo del frutto appena spremuto.</p>
+            </div>
+            <section class="products-section">
+                <div class="product-row">
+                    <my-card 
+                        prodotto="imgs/olio-arancia.jpg" 
+                        freccia="./imgs/turnme.png"
+                        pdf="./imgs/pdf/olio-essenziale-arancio.pdf">
+                        <h4 slot="product-name">Olio Essenziale Arancio</h4>
+                        <p slot="product-description">
+                            Fusti in ferro da Kg 25 e Kg 180</p>
+                    </my-card>
+                    <p class="codice">Codice 05</p>
+                </div>
+                <div class="product-row switched">
+                    <my-card 
+                        prodotto="imgs/olio-mandarino.jpg" 
+                        freccia="./imgs/turnme.png"
+                        pdf="./imgs/pdf/olio-essenziale-mandarino.pdf">
+                        <h4 slot="product-name">Olio Essenziale Mandarino</h4>
+                        <p slot="product-description">
+                            Fusti in ferro da Kg 25 e Kg 180</p>
+                    </my-card>
+                    <p class="codice">Codice 25</p>
+                </div>
+                <div class="product-row">
+                    <my-card 
+                        prodotto="imgs/olio-limone.jpg" 
+                        freccia="./imgs/turnme.png"
+                        pdf="./imgs/pdf/olio-essenziale-limone.pdf">
+                        <h4 slot="product-name">Olio Essenziale Limone</h4>
+                        <p slot="product-description">
+                            Fusti in ferro da Kg 25 e Kg 180</p>
+                    </my-card>
+                    <p class="codice">Codice 02</p>
+                </div>
             </section>
 
         </div>
@@ -129,18 +168,18 @@
                 <div id="slider">
                     <figure>
                         <img src="./imgs/slider/1.jpg" alt="">
-                        <video src="./imgs/slider/1.mp4" autoplay preload muted  loop></video>
-                        <video src="./imgs/slider/2.mp4" autoplay  preload muted loop></video>
-                        <video src="./imgs/slider/3.mp4" autoplay preload muted loop></video>
-                        <video src="./imgs/slider/4.mp4" autoplay preload muted loop></video>
-                        <video src="./imgs/slider/5.mp4" autoplay preload muted loop></video>
+                        <img src="./imgs/slider/1.gif" alt="">
+                        <img src="./imgs/slider/2.gif" alt="">
+                        <img src="./imgs/slider/3.gif" alt="">
+                        <img src="./imgs/slider/4.gif" alt="">
+                        <img src="./imgs/slider/5.gif" alt="">
                     </figure>
                 </div>
             </div>
 
         </div>
         <div id="contattaci" class="contattaci">
-            <img src="./imgs/lavoro.jpg" alt="" class="contact-img">
+            <img src="./imgs/lavoro.jpeg" alt="" class="contact-img">
             <div class="contact-info">
                 <h2>Contattaci</h2>
                 <iframe id="mappa"
@@ -181,7 +220,7 @@
         window.setTimeout(() => {
             splash.style.left = '-100%';
             splash.style.opacity = '0';
-        }, 2000)
+        }, 200)
 
         //navbar scroll buttons
         const storiaSection = document.querySelector('.storia');
@@ -250,7 +289,7 @@
                 slider.style.transition = 'left .8s ease'
                 slideQ -= 50;
             }
-        }, 5000)
+        }, 4000)
 
         
     </script>

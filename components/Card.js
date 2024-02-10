@@ -9,6 +9,10 @@ cardTemplate.innerHTML = `
         margin: 0;
         }
 
+    a{
+        color: #fff;
+    }
+
     .flip-card{
         width: 80%;
         min-width: 80%;
@@ -87,7 +91,7 @@ cardTemplate.innerHTML = `
     }
 
     .card-back{
-        background: rgba(41, 41, 41, 0.07);
+        background: #64B245;
         box-shadow: 0px 5px 9.3px 7px rgba(0, 0, 0, 0.41);
     }
     
@@ -128,7 +132,7 @@ cardTemplate.innerHTML = `
         height: 50px;
         border-radius: 90px 0px 0px 90px;
         background: #268A42;
-        padding: 4%;
+        padding: 10px;
         display: grid;
         place-content: center;
     }
@@ -136,7 +140,7 @@ cardTemplate.innerHTML = `
     .turnme img{
         max-width: 100%;
         margin: auto;
-        margin-left: 4px;
+        padding-left: 4px;
     }
 
     @media(max-width: 768px){
@@ -159,9 +163,8 @@ cardTemplate.innerHTML = `
             <div class="card-inner">
                 <div class="card-back">
                     <div class="card-back-inner">
-                        <h3>Scheda Tecnica</h3>
-                        <a href="../imgs/succo-arance.pdf" download="">
-                            <img src=""/>
+                        <a target="_blank" href=''>
+                            <h3>PDF Scheda Tecnica</h3>
                         </a>
                     </div>
                 </div>
@@ -189,13 +192,13 @@ class Card extends HTMLElement {
     }
 
     static get observedAttributes(){
-        return['prodotto'];
+        return['prodotto', 'pdf'];
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
         this.shadowRoot.querySelector('.product-pic img').src = this.getAttribute('prodotto');
         this.shadowRoot.querySelector('.turnme img').src = this.getAttribute('freccia');
-        this.shadowRoot.querySelector('.card-back-inner img').src = this.getAttribute('download');
+        this.shadowRoot.querySelector('.card-back-inner a').href = this.getAttribute('pdf');
     }
 
     flipMe = () => {
