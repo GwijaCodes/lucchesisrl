@@ -155,6 +155,12 @@ cardTemplate.innerHTML = `
         .flip-card{
             width: 100%;
         }
+
+        .turnme{
+            width: 30px;
+            height: 40px;
+            padding: 6px;
+        }
     }
     </style>
 
