@@ -32,7 +32,7 @@
 
 <body>
     <nav-bar brand="./imgs/marchio-carta.webp"></nav-bar>
-    <img src="./imgs/limonis.png" alt="fetta di limone" class="limone-sm">
+    <img src="./imgs/limonis.webp" alt="fetta di limone" class="limone-sm">
     <img src="./imgs/marchio-carta.webp" alt="marchio lucchesi limone" class="marchio">
     <main>
         <header>
@@ -57,7 +57,7 @@
                     conoscenza della frutta e, non ultima, alla contiguità tra gli agrumeti e lo stabilimento, vi
                     garantiamo freschezza e fragranza del prodotto, tutto made in <b>Sicily</b>.</p>
             </div>
-            <img src="./imgs/limonis.png" alt="fetta di limone" class="limone-pr">
+            <img src="./imgs/limonis.webp" alt="fetta di limone" class="limone-pr">
         </div>
         <div class="prodotti">
             <div class="prodotti-text">
@@ -69,7 +69,7 @@
             <section class="products-section">
                 <div class="product-row ">
                     <my-card 
-                        prodotto="imgs/arancia-cassa.png" 
+                        prodotto="imgs/arancia-cassa.webp" 
                         freccia="./imgs/turnme.png" 
                         pdf="./imgs/pdf/arance.pdf">
                         <h4 slot="product-name">Succo d'Arancia Surgelato</h4>
@@ -81,7 +81,7 @@
                 </div>
                 <div class="product-row switched">
                     <my-card 
-                        prodotto="imgs/succo-limone.png" 
+                        prodotto="imgs/succo-limone.webp" 
                         freccia="./imgs/turnme.png"
                         pdf="./imgs/pdf/limone.pdf">
                         <h4 slot="product-name">Succo di Limone Surgelato</h4>
@@ -93,7 +93,7 @@
                 </div>
                 <div class="product-row">
                     <my-card 
-                        prodotto="imgs/arancia-rossa.png" 
+                        prodotto="imgs/arancia-rossa.webp" 
                         freccia="./imgs/turnme.png"
                         pdf="./imgs/pdf/mandarino.pdf">
                         <h4 slot="product-name">Succo di Mandarino Surgelato</h4>
@@ -148,7 +148,7 @@
         </div>
         <div class="chisiamo">
             <div class="chisiamo-up">
-                <img id="mano-albero" src="./imgs/mano.png" alt="mano albero limoni">
+                <img id="mano-albero" src="./imgs/mano.webp" alt="mano albero limoni">
                 <div class="chisiamo-text">
                     <h2>Dall'albero a Voi</h2>
                     <p>La <b>nostra azienda</b> ha sede nel territorio di <b>Aci Catena</b>, tra l’Etna e il Mare. Zona
@@ -168,11 +168,12 @@
                 <div id="slider">
                     <figure>
                         <img src="./imgs/slider/1.jpg" alt="">
-                        <img src="./imgs/slider/1.gif" alt="">
-                        <img src="./imgs/slider/2.gif" alt="">
-                        <img src="./imgs/slider/3.gif" alt="">
-                        <img src="./imgs/slider/4.gif" alt="">
-                        <img src="./imgs/slider/5.gif" alt="">
+                        <video src="./imgs/slider/1.mp4" autoplay loop muted poster="./imgs/slider/1poster.jpg"></video>
+                        <video src="./imgs/slider/2.mp4" autoplay loop muted poster="./imgs/slider/2poster.jpg"></video>
+                        <video src="./imgs/slider/3.mp4" autoplay loop muted poster="./imgs/slider/3poster.jpg"></video>
+                        <video src="./imgs/slider/4.mp4" autoplay loop muted poster="./imgs/slider/4poster.jpg"></video>
+                        <video src="./imgs/slider/5.mp4" autoplay loop muted poster="./imgs/slider/5poster.jpg"></video>
+
                     </figure>
                 </div>
             </div>
@@ -197,7 +198,7 @@
             </div>
         </div>
         
-        <img id="template-phone" src="./imgs/template-phone.png" alt="social">
+        <img id="template-phone" src="./imgs/template-phone.webp" alt="social">
     </main>
     <my-footer></my-footer>
     <div class="splash">
@@ -220,7 +221,7 @@
         window.setTimeout(() => {
             splash.style.left = '-100%';
             splash.style.opacity = '0';
-        }, 200)
+        }, 2500)
 
         //navbar scroll buttons
         const storiaSection = document.querySelector('.storia');
