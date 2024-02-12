@@ -168,7 +168,6 @@
                 <div id="slider">
                     <figure>
                         <img src="./imgs/slider/1.jpg" alt="">
-                        <video src="./imgs/slider/1.mp4" autoplay loop muted poster="./imgs/slider/1poster.jpg"></video>
                         <video src="./imgs/slider/2.mp4" autoplay loop muted poster="./imgs/slider/2poster.jpg"></video>
                         <video src="./imgs/slider/3.mp4" autoplay loop muted poster="./imgs/slider/3poster.jpg"></video>
                         <video src="./imgs/slider/4.mp4" autoplay loop muted poster="./imgs/slider/4poster.jpg"></video>
@@ -284,7 +283,7 @@
         window.setInterval(() => {
             console.log(slideQ)
             slider.style.left = slideQ + '%';
-            if (slideQ == -200) {
+            if (slideQ == -150) {
                     slideQ = 0
             } else {
                 slider.style.transition = 'left .8s ease'
