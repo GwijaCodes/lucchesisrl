@@ -107,12 +107,12 @@ h1 {
 
 header p {
     font-size: 3vh;
-    letter-spacing: 1vh;
+    letter-spacing: .4vh;
 }
 
 h1,
 header p {
-    text-shadow: 0px 2px 10px #00000054;
+    text-shadow: -2px 2px 10px #000000a0;
 }
 
 .limone {
@@ -420,8 +420,7 @@ header p {
     }
 
     header p {
-        font-size: 1vh;
-        letter-spacing: 4px;
+        font-size: 2vh important!;
     }
 
     .limone {
