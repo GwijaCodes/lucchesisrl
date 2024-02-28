@@ -90,6 +90,7 @@ header {
 /*HEADER*/
 
 header {
+    display: grid; place-content: center;
     background-color: #ffffff;
     background: url('./imgs/02.jpg') center left;
     background-position: 100%;
@@ -108,9 +109,10 @@ header p {
     letter-spacing: .4vh;
 }
 
-header .grid{width: 80vw; display: flex; flex-wrap: no-wrap; margin: 20% auto;}
+header .grid{width: 80vw; display: flex; flex-wrap: no-wrap; margin: auto;}
 .col-30{width: 30%}
 .col-70{width: 70%}
+
 .limone {
     position: absolute;
     width: 40%;
