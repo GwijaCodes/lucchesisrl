@@ -109,7 +109,7 @@ header p {
     letter-spacing: .4vh;
 }
 
-header .grid{width: 80vw; display: flex; flex-wrap: no-wrap; margin: auto;}
+header .grid{width: 80vw; display: flex; align-items: center; margin: auto;}
 .col-30{width: 30%}
 .col-70{width: 70%}
 
