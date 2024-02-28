@@ -391,10 +391,7 @@ header .grid{width: 80vw; display: flex; align-items: center; margin: auto;}
         width: 50px;
     }
 
-    header {
-        padding: 6%;
-        background-size: cover;
-    }
+    .grid
     
     h1 {
         font-size: 4vh;
