@@ -114,7 +114,6 @@ header .grid{width: 80vw; display: flex; align-items: center; margin: auto;}
 
 header .grid img{
     max-width: 100%;
-    filter: drop-shadow(2px 2px 10px #fff);
 }
 
 .limone {
